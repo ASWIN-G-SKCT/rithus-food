@@ -83,6 +83,7 @@ const Register = () => {
 
   return (
     <form onSubmit={onSubmitHandler}>
+      <h1>Register</h1>
       <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
       <input
         placeholder="password"
