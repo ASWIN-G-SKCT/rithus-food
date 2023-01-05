@@ -6,7 +6,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -23,7 +23,7 @@ const Register = () => {
       });
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmitHandler}>
       <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
       <input
         placeholder="password"
