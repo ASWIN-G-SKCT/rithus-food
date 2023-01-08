@@ -7,20 +7,34 @@ import {
   signInWithPopup,
   OAuthCredential,
 } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 import { login } from "../store/features/userSlice";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
+import { User } from "../interfaces/types";
 
 const Register = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
-  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const addUserToCollection = async (user: User): Promise<void> => {
+    await setDoc(doc(db, "users", user.id), user);
+  };
+
+  const onEmailPasswordLogin = async () => {
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        dispatch(login(user));
+      .then(({ user: authUser }) => {
+        const user = {
+          name,
+          id: authUser.uid,
+          email: authUser.email,
+          verified: authUser.emailVerified,
+          admin: false,
+        };
+        addUserToCollection(user).then(() => {
+          dispatch(login(user));
+        });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -31,15 +45,26 @@ const Register = () => {
 
   const onGoogleLogin = () => {
     const provider = new GoogleAuthProvider();
-
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = (credential as OAuthCredential)?.accessToken;
+
         // The signed-in user info.
-        const user = result.user;
-        dispatch(login(user));
+        const authUser = result.user;
+        const user = {
+          id: authUser.uid,
+          name: authUser.displayName,
+          email: authUser.email,
+          verified: authUser.emailVerified,
+          admin: false,
+        };
+
+        addUserToCollection(user).then(() => {
+          dispatch(login(user));
+        });
+
         // ...
       })
       .catch((error) => {
@@ -56,11 +81,11 @@ const Register = () => {
 
   const onFacebookLogin = () => {
     const provider = new FacebookAuthProvider();
-
+    let signedInUser;
     signInWithPopup(auth, provider)
       .then((result) => {
         // The signed-in user info.
-        const user = result.user;
+        const authUser = result.user;
 
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const credential = FacebookAuthProvider.credentialFromResult(result);
@@ -79,17 +104,32 @@ const Register = () => {
         alert(errorMessage);
         // ...
       });
+
+    return signedInUser;
   };
 
   return (
-    <form onSubmit={onSubmitHandler}>
+    <form>
       <h1>Register</h1>
-      <input placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+      <input
+        placeholder="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
       <input
         placeholder="password"
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button>Submit</button>
+      <button type="button" onClick={onEmailPasswordLogin}>
+        Submit
+      </button>
+
       <hr></hr>
       <button type="button" onClick={onGoogleLogin}>
         Continue With Google

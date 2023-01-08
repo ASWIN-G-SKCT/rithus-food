@@ -7,6 +7,7 @@ export const makeStore = () =>
     reducer: {
       user: userReducer,
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   });
 
 export const wrapper = createWrapper(makeStore, { debug: true });

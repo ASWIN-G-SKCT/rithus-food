@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 import { login } from "../store/features/userSlice";
 
