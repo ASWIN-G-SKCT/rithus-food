@@ -1,6 +1,7 @@
 interface Product {
   _id: string;
   name: string;
+  baseQuantity: string;
   price: number;
 }
 
@@ -10,6 +11,21 @@ interface User {
   email: string | null;
   verified: boolean;
   admin: boolean;
+}
+
+interface Review {
+  date: string;
+  product: string;
+  stars: number;
+  text: string;
+  user: string;
+}
+
+interface Order {
+  date: string;
+  address: string;
+  quantity: number;
+  user: string;
 }
 
 export type { Product, User };
