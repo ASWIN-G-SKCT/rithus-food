@@ -6,7 +6,9 @@
     "skipLibCheck": true,
     "strict": true,
     "baseUrl": ".",
-
+    "paths": {
+      "@/firebase/*": ["firebase/*"]
+    },
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
