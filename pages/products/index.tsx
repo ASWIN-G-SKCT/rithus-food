@@ -12,8 +12,8 @@ const Products = () => {
     error,
   } = useFetchWithSWR<Product[]>("/api/products");
 
-  const selector = useSelector((state) => state);
-
+  const user = useSelector((state) => state);
+  console.log(user);
   if (error) {
     return <div>Error {error}</div>;
   }
