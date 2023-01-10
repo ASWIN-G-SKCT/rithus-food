@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import useFetchWithSWR from "../../hooks/useFetchWithSWR";
 import { Product } from "../../interfaces/types";
+import ProductCard from "../../components/product/ProductCard";
+import { useSelector } from "react-redux";
+import Link from "next/link";
 
 const Products = () => {
   const {
@@ -8,6 +11,8 @@ const Products = () => {
     isLoading,
     error,
   } = useFetchWithSWR<Product[]>("/api/products");
+
+  const selector = useSelector((state) => state);
 
   if (error) {
     return <div>Error {error}</div>;
@@ -18,8 +23,9 @@ const Products = () => {
   return (
     <div>
       {products?.map((product: Product) => (
-        <div key={product._id}>{JSON.stringify(product)}</div>
+        <ProductCard key={product._id} product={product} />
       ))}
+      <Link href={"/"}>Go Home</Link>
     </div>
   );
 };

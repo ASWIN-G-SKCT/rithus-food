@@ -11,6 +11,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { login } from "../store/features/userSlice";
 import { auth, db } from "../firebase";
 import { User } from "../interfaces/types";
+import Link from "next/link";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const Register = () => {
     await setDoc(doc(db, "users", user.id), user);
   };
 
-  const onEmailPasswordLogin = async () => {
+  const onEmailPasswordLogin = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user: authUser }) => {
         const user = {
@@ -32,9 +33,10 @@ const Register = () => {
           verified: authUser.emailVerified,
           admin: false,
         };
-        addUserToCollection(user).then(() => {
-          dispatch(login(user));
-        });
+
+        dispatch(login(user));
+
+        addUserToCollection(user).then(() => {});
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -53,6 +55,7 @@ const Register = () => {
 
         // The signed-in user info.
         const authUser = result.user;
+
         const user = {
           id: authUser.uid,
           name: authUser.displayName,
@@ -61,9 +64,9 @@ const Register = () => {
           admin: false,
         };
 
-        addUserToCollection(user).then(() => {
-          dispatch(login(user));
-        });
+        addUserToCollection(user).then(() => {});
+
+        dispatch(login(user));
 
         // ...
       })
@@ -137,6 +140,8 @@ const Register = () => {
       <button type="button" onClick={onFacebookLogin}>
         Continue With Facebook
       </button>
+
+      <Link href={"/"}>Go Home</Link>
     </form>
   );
 };

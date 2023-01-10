@@ -3,6 +3,11 @@ interface Product {
   name: string;
   baseQuantity: string;
   price: number;
+  description: string;
+  ingredients: string[];
+  preparation: string[];
+  benefits: string[];
+  category: string;
 }
 
 interface User {
@@ -28,4 +33,4 @@ interface Order {
   user: string;
 }
 
-export type { Product, User };
+export type { Product, User, Review, Order };
