@@ -8,9 +8,9 @@ import {
   OAuthCredential,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { login } from "../store/features/userSlice";
-import { auth, db } from "../firebase";
-import { User } from "../interfaces/types";
+import { login } from "store/features/userSlice";
+import { auth, db } from "firebase";
+import { User } from "interfaces/types";
 import Link from "next/link";
 
 const Register = () => {

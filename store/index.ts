@@ -2,7 +2,7 @@ import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 
 import { useDispatch } from "react-redux";
-import rootReducer, { RootState } from "./rootReducer";
+import rootReducer, { RootState } from "store/rootReducer";
 
 const store = configureStore({
   reducer: rootReducer,

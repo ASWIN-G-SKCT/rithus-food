@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import useFetchWithSWR from "../../hooks/useFetchWithSWR";
-import { Product } from "../../interfaces/types";
-import ProductCard from "../../components/product/ProductCard";
+import useFetchWithSWR from "hooks/useFetchWithSWR";
+import { Product } from "interfaces/types";
+import ProductCard from "components/product/ProductCard";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 

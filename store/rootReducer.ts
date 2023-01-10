@@ -1,5 +1,5 @@
-import auth from "./features/userSlice";
-import cart from "./features/cartSlice";
+import auth from "store/features/userSlice";
+import cart from "store/features/cartSlice";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({

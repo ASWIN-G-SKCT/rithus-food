@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren, use, useState } from "react";
-import { Product } from "../../interfaces/types";
+import { Product } from "interfaces/types";
 import { useSelector } from "react-redux";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
