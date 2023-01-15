@@ -4,17 +4,18 @@ import { useSelector } from "react-redux";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
 
-import { db } from "../../firebase";
+import { auth, db } from "../../firebase";
 
 const ProductCard: FC<{ product: Product }> = ({ product }) => {
   const [review, setReview] = useState("");
 
   //Todo: Fix the user store
-  const userId = useSelector((state: any) => state?.user)?.user?.id;
+  const user = useSelector((state: any) => state.auth);
+  console.log(user);
 
   const onReviewSubmit = () => {
     addDoc(collection(db, "reviews"), {
-      user: userId,
+      user: doc(db, "users/" + auth.currentUser?.uid),
       text: review,
       product: product._id,
       stars: 5,

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 import {
   GoogleAuthProvider,
   OAuthCredential,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 import { login } from "store/features/userSlice";
+import { User } from "interfaces/types";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,10 +19,26 @@ const Login = () => {
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        dispatch(login(user));
+      .then(async ({ user: authUser }) => {
+        const userRef = doc(db, "users", authUser.uid);
+        const userSnap = await getDoc(userRef);
+        // TODO: Validate UserSnap interface
+        if (userSnap.exists()) {
+          const userData = userSnap.data();
+          const user = {
+            name: userData.name,
+            id: userData.id,
+            email: userData.email,
+            verified: userData.verified || false,
+            admin: userData.admin || false,
+          };
+
+          dispatch(login(user));
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+
         // ...
       })
       .catch((error) => {
@@ -41,7 +58,7 @@ const Login = () => {
         const token = (credential as OAuthCredential)?.accessToken;
         // The signed-in user info.
         const user = result.user;
-        dispatch(login(user));
+        // dispatch(login(user));
         // ...
       })
       .catch((error) => {
@@ -56,32 +73,32 @@ const Login = () => {
       });
   };
 
-  const onFacebookLogin = () => {
-    const provider = new FacebookAuthProvider();
+  // const onFacebookLogin = () => {
+  //   const provider = new FacebookAuthProvider();
 
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // The signed-in user info.
-        const user = result.user;
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       // The signed-in user info.
+  //       const user = result.user;
 
-        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        const credential = FacebookAuthProvider.credentialFromResult(result);
-        const accessToken = credential?.accessToken;
+  //       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+  //       const credential = FacebookAuthProvider.credentialFromResult(result);
+  //       const accessToken = credential?.accessToken;
 
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = FacebookAuthProvider.credentialFromError(error);
-        alert(errorMessage);
-        // ...
-      });
-  };
+  //       // ...
+  //     })
+  //     .catch((error) => {
+  //       // Handle Errors here.
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       // The email of the user's account used.
+  //       const email = error.customData.email;
+  //       // The AuthCredential type that was used.
+  //       const credential = FacebookAuthProvider.credentialFromError(error);
+  //       alert(errorMessage);
+  //       // ...
+  //     });
+  // };
 
   return (
     <form onSubmit={onSubmitHandler}>

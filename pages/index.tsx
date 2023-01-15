@@ -3,11 +3,10 @@ import styles from "styles/Home.module.css";
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.main}>
       <Link href={"/login"}>Login</Link>
       <Link href={"/register"}>Register</Link>
-      <Link href={"/add-product"}>Add a Product</Link>
       <Link href={"/products"}>Products</Link>
-    </>
+    </div>
   );
 }
