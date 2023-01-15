@@ -8,6 +8,7 @@ interface Product {
   preparation: string[];
   benefits: string[];
   category: string;
+  images: string[];
 }
 
 interface User {

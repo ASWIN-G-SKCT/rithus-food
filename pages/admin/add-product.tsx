@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
 import { addDoc, collection } from "firebase/firestore";
 
-import { db, storageRef } from "@/firebase/index";
-import { uploadBytes } from "firebase/storage";
+import { db, storage } from "@/firebase/index";
+import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 
 type FormInputs = {
   name: string;
@@ -14,8 +14,8 @@ type FormInputs = {
   benefits: string[];
   ingredients: string[];
   preparations: string[];
-  productImages: string[];
   price: number;
+  images: FileList | undefined;
 };
 
 const AddProduct = () => {
@@ -60,7 +60,22 @@ const AddProduct = () => {
   } as never);
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
-    addDoc(collection(db, "products"), data).then(() => alert("Product added"));
+    const productImagesURI: string[] = await Promise.all(
+      Array.from(data.images as FileList).map(async (file) => {
+        const upload = await uploadBytes(
+          ref(storage, "product_images/" + file.name),
+          file
+        );
+        return getDownloadURL(upload.ref);
+      })
+    );
+
+    await addDoc(collection(db, "products"), {
+      ...data,
+      images: productImagesURI,
+    });
+
+    alert("Product added");
   };
 
   return (
@@ -124,6 +139,8 @@ const AddProduct = () => {
       <input type="text" {...register("baseQuantity")} />
       <label>Price</label>
       <input type="text" {...register("price")} />
+
+      <input type="file" {...register("images")} multiple></input>
 
       <input type="submit" />
     </form>

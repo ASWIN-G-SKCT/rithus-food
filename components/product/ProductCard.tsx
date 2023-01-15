@@ -5,6 +5,7 @@ import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
 
 import { auth, db } from "../../firebase";
+import Image from "next/image";
 
 const ProductCard: FC<{ product: Product }> = ({ product }) => {
   const [review, setReview] = useState("");
@@ -26,7 +27,15 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
   return (
     <div>
       <div key={product._id}>{JSON.stringify(product)}</div>
-
+      {product.images.map((image) => (
+        <Image
+          width={180}
+          height={180}
+          alt={product.name}
+          src={image}
+          key={image}
+        />
+      ))}
       <input
         placeholder="review"
         value={review}
