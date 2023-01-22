@@ -1,18 +1,17 @@
-import React, { FC, PropsWithChildren, use, useState } from "react";
+import React, { FC, useState } from "react";
 import { Product } from "interfaces/types";
-import { useSelector } from "react-redux";
-import { doc, setDoc, Timestamp } from "firebase/firestore";
+import { useDispatch, useSelector } from "react-redux";
+import { doc, Timestamp } from "firebase/firestore";
 import { collection, addDoc } from "firebase/firestore";
 
 import { auth, db } from "../../firebase";
 import Image from "next/image";
+import { addToCart } from "store/features/cartSlice";
 
 const ProductCard: FC<{ product: Product }> = ({ product }) => {
   const [review, setReview] = useState("");
 
-  //Todo: Fix the user store
-  const user = useSelector((state: any) => state.auth);
-  console.log(user);
+  const dispatch = useDispatch();
 
   const onReviewSubmit = () => {
     addDoc(collection(db, "reviews"), {
@@ -36,6 +35,9 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
           key={image}
         />
       ))}
+      <button onClick={() => dispatch(addToCart({ quantity: 1, product }))}>
+        Add To Cart
+      </button>
       <input
         placeholder="review"
         value={review}

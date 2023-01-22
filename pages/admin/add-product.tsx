@@ -73,6 +73,7 @@ const AddProduct = () => {
     await addDoc(collection(db, "products"), {
       ...data,
       images: productImagesURI,
+      price: +data.price,
     });
 
     alert("Product added");
@@ -138,7 +139,7 @@ const AddProduct = () => {
       <label>Base Quantity</label>
       <input type="text" {...register("baseQuantity")} />
       <label>Price</label>
-      <input type="text" {...register("price")} />
+      <input type="number" {...register("price")} />
 
       <input type="file" {...register("images")} multiple></input>
 

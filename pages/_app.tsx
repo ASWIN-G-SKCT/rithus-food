@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
 import Navbar from "components/common/navbar";
 
-export default function App({ Component, pageProps, ...rest }: AppProps) {
+function App({ Component, pageProps, ...rest }: AppProps) {
   const { store, props } = wrapper.useWrappedStore({ pageProps, ...rest });
   return (
     <Provider store={store}>
@@ -13,3 +13,5 @@ export default function App({ Component, pageProps, ...rest }: AppProps) {
     </Provider>
   );
 }
+
+export default wrapper.withRedux(App);
