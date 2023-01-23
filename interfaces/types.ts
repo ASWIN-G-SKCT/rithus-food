@@ -9,6 +9,8 @@ interface Product {
   benefits: string[];
   category: string;
   images: string[];
+  discount: number;
+  itemsInStock: number;
 }
 
 interface User {

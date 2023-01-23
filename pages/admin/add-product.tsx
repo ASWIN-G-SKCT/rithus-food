@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm, SubmitHandler, useFieldArray } from "react-hook-form";
 import { addDoc, collection } from "firebase/firestore";
 
@@ -16,6 +16,7 @@ type FormInputs = {
   preparations: string[];
   price: number;
   images: FileList | undefined;
+  discount: number;
 };
 
 const AddProduct = () => {
@@ -140,6 +141,8 @@ const AddProduct = () => {
       <input type="text" {...register("baseQuantity")} />
       <label>Price</label>
       <input type="number" {...register("price")} />
+      <label>Discount</label>
+      <input type="number" max={100} min={0} {...register("discount")} />
 
       <input type="file" {...register("images")} multiple></input>
 

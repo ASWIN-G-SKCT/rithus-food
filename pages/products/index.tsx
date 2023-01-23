@@ -4,13 +4,10 @@ import { Product } from "interfaces/types";
 import ProductCard from "components/product/ProductCard";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import useFetchProducts from "hooks/useFetchProducts";
 
 const Products = () => {
-  const {
-    data: products,
-    isLoading,
-    error,
-  } = useFetchWithSWR<Product[]>("/api/products");
+  const { products, isLoading, error } = useFetchProducts();
 
   const user = useSelector((state) => state);
 
