@@ -14,7 +14,8 @@ const CartItemCard: FC<CartItemCardProps> = ({ cartItem }) => {
   const dispatch = useDispatch();
   return (
     <div>
-      ID {cartItem.product._id} quantity {cartItem.quantity}
+      ID {cartItem.product._id} quantity {cartItem.quantity} price{" "}
+      {cartItem.product.price} X {cartItem.quantity}
       <button
         onClick={() =>
           dispatch(
