@@ -67,6 +67,7 @@ const AddProduct = () => {
           ref(storage, "product_images/" + file.name),
           file
         );
+
         return getDownloadURL(upload.ref);
       })
     );

@@ -9,6 +9,12 @@ const Admin = () => {
       <Link href="/admin/hot-deals">Hot Deals</Link>
       <br />
       <Link href="/admin/discounts">Discounts</Link>
+      <br />
+      <Link href="/admin/orders">Orders</Link>
+      <br />
+      <Link href="/admin/payments">Payments</Link>
+      <br />
+      <Link href="/admin/categories">Categories</Link>
     </div>
   );
 };

@@ -13,6 +13,12 @@ interface Product {
   itemsInStock: number;
 }
 
+interface HotDeal {
+  _id: string;
+  title: string;
+  image: string;
+}
+
 interface User {
   name: string | null;
   id: string;
@@ -36,4 +42,4 @@ interface Order {
   user: string;
 }
 
-export type { Product, User, Review, Order };
+export type { Product, User, Review, Order, HotDeal };
