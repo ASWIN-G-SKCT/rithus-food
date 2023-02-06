@@ -6,10 +6,15 @@ import { useSelector } from "react-redux";
 import { CartState } from "store/features/cartSlice";
 import { RootState } from "store/rootReducer";
 import { AuthState } from "store/features/userSlice";
+import { TAddress } from "interfaces/types";
 
 const Cart = () => {
   const cart = useSelector<RootState, CartState>((state) => state.cart);
-  const [addressToShip, setAddressToShip] = useState("");
+  const [addressToShip, setAddressToShip] = useState<TAddress>({
+    city: "",
+    door: "",
+    state: "",
+  });
   const { user } = useSelector<RootState, AuthState>((state) => state.auth);
 
   const onClickHandler = async () => {
@@ -17,6 +22,8 @@ const Cart = () => {
       user: "/user/" + user?.id,
       items: cart.items,
       total: cart.total,
+      address: addressToShip,
+      status: "ordered",
       date: Timestamp.fromDate(new Date()),
     });
     alert("Order Placed");
@@ -32,9 +39,11 @@ const Cart = () => {
       })}
       <input
         type="text"
-        value={addressToShip}
-        placeholder="Address"
-        onChange={(e) => setAddressToShip(e.target.value)}
+        value={addressToShip.city}
+        placeholder="City"
+        onChange={(e) =>
+          setAddressToShip({ ...addressToShip, city: e.target.value })
+        }
       />
       <button onClick={onClickHandler}>Buy</button>
     </div>

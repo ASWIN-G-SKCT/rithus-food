@@ -9,7 +9,6 @@ import {
 import { doc, getDoc } from "firebase/firestore";
 import { useDispatch } from "react-redux";
 import { login } from "store/features/userSlice";
-import { User } from "interfaces/types";
 
 const Login = () => {
   const [email, setEmail] = useState("");

@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase/firestore";
+
 interface Product {
   _id: string;
   name: string;
@@ -35,11 +37,24 @@ interface Review {
   user: string;
 }
 
-interface Order {
-  date: string;
-  address: string;
+type OrderItem = {
+  product: Product;
   quantity: number;
+};
+
+type TAddress = {
+  door: string;
+  landmark?: string;
+  city: string;
+  state: string;
+};
+interface Order {
+  _id: string;
+  date: Timestamp;
+  address: TAddress;
+  items: OrderItem[];
+  status: "dispatched" | "ordered" | "arrived";
   user: string;
 }
 
-export type { Product, User, Review, Order, HotDeal };
+export type { Product, User, Review, Order, HotDeal, TAddress };
