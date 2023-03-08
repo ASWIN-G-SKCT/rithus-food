@@ -15,7 +15,12 @@ export default function Home() {
             healthy.
           </h2>
         </div>
-
+        <div className={styles.intro}>
+          <h2>
+            Your health is our business. So the choice is yours to make you
+            healthy.
+          </h2>
+        </div>
         <div className={styles.STD}>
           <Image
             src={require("public/Icons/Arrow.svg")}
