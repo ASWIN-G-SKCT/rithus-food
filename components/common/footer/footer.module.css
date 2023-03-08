@@ -1,4 +1,5 @@
 .footer {
   display: flex;
+  display: none; /* temp */
   align-items: center;
 }

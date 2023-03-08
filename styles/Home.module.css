@@ -1,0 +1,35 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url("../public/Assets/Dot\ Grid\ Pattern.svg");
+  background-position: center;
+}
+.wrapper img[alt="bowl of grains"] {
+  position: absolute;
+  right: -15rem;
+  bottom: -15rem;
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  /* max-height: 80vh; */
+  overflow-y: auto;
+}
+.intro {
+  padding: 0.5rem;
+  height: 100%;
+}
+
+.STD {
+  /*Scroll to discover*/
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
