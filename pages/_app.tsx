@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { Provider } from "react-redux";
 import type { AppProps } from "next/app";
 import Navbar from "components/common/navbar";
+import Footer from "components/common/footer";
 
 function App({ Component, pageProps, ...rest }: AppProps) {
   const { store, props } = wrapper.useWrappedStore({ pageProps, ...rest });
@@ -10,6 +11,7 @@ function App({ Component, pageProps, ...rest }: AppProps) {
     <Provider store={store}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </Provider>
   );
 }
