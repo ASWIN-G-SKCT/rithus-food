@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
       {pathname === "/" && user?.admin && <Link href={"/admin"}>Admin</Link>}
       <div className={styles.actions}>
-        <h3>Mom's Choice</h3>
+        <h3 className={styles.moms_choice}>Mom's Choice</h3>
         <Image src={require("public/Icons/Search.svg")} alt="Search Icon" />
         <Image src={require("public/Icons/User.svg")} alt="User Icon" />
         <Image src={require("public/Icons/Cart.svg")} alt="Cart Icon" />

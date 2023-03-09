@@ -10,7 +10,8 @@
 .wrapper img[alt="bowl of grains"] {
   position: absolute;
   right: -15rem;
-  bottom: -15rem;
+  bottom: -10rem;
+  width: 30rem;
 }
 .main {
   position: relative;
@@ -20,9 +21,9 @@
   height: 80vh;
   overflow-y: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
-.intro {
+.main .page {
   padding: 0.5rem;
   height: 100%;
   scroll-snap-align: center;
