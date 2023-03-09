@@ -1,3 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&display=swap");
+
+:root {
+  /* colours */
+  --clr-primary-900: hsl(35, 51%, 19%);
+  --clr-primary-800: hsl(27, 12%, 47%);
+  --clr-primary-700: hsl(30, 22%, 52%);
+  --clr-primary-600: hsl(36, 57%, 88%);
+  --clr-primary-500: hsl(0, 0%, 96%);
+  --clr-primary-400: hsl(40, 100%, 99%);
+  --clr-secondary-100: hsl(40, 100%, 92%);
+
+  /* font-families */
+  --ff-primary: "Dancing Script", cursive;
+  --ff-secondary: "IBM Plex Sans Condensed", sans-serif;
+  --ff-tertiary: "EB Garamond", serif;
+  --ff-ph: var(--ff-primary);
+  --ff-head: var(--ff-secondary);
+  --ff-body: var(--ff-secondary);
+  --ff-ptitle: var(--ff-tertiary);
+
+  /* font-weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* font-size */
+  --fs-100: 0.875rem; /*14px*/
+  --fs-150: 1rem; /*16px*/
+  --fs-200: 1.125rem; /*18px*/
+  --fs-300: 1.25rem; /*20px*/
+  --fs-350: 1.563rem; /*25px*/
+  --fs-400: 1.875rem; /*30px*/
+  --fs-500: 2.5rem; /*40px*/
+  --fs-600: 3.75rem; /*60px*/
+  --fs-700: 4.375rem; /*70px*/
+
+  --fs-primary-headings: var(--fs-500);
+  --fs-secondary-headings: var(--fs-350);
+  --fs-primary-pheadings: var(--fs-150);
+  --fs-body: var(--fs-100);
+}
+
+@media (max-width: 100px) {
+  :root {
+    --fs-primaryheadings: var(--fs-700);
+    --fs-secondary-headings: var(--fs-600);
+    --fs-primary-pheadings: var(--fs-500);
+    --fs-body: var(--fs-500);
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
