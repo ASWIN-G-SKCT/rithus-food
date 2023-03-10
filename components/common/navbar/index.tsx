@@ -10,7 +10,7 @@ const Navbar = () => {
   const { pathname } = useRouter();
   return (
     <div className={styles.navbar}>
-      <div>
+      <div className={styles.logo}>
         <h1>Rithus</h1>
         <h1>Foods</h1>
       </div>

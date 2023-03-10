@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--clr-primary-900);
 }
 .moms_choice {
   display: none;
@@ -10,4 +11,10 @@
 .actions {
   display: flex;
   align-items: center;
+}
+.logo h1 {
+  color: var(--clr-primary-900);
+}
+.logo h1:nth-child(2) {
+  color: var(--clr-accent-100);
 }

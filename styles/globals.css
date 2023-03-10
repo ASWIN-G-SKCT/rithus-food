@@ -9,8 +9,10 @@
   --clr-primary-700: hsl(30, 22%, 52%);
   --clr-primary-600: hsl(36, 57%, 88%);
   --clr-primary-500: hsl(0, 0%, 96%);
-  --clr-primary-400: hsl(40, 100%, 99%);
+  --clr-primary-400: hsl(40, 100%, 99%); /* Background color */
   --clr-secondary-100: hsl(40, 100%, 92%);
+
+  --clr-accent-100: hsl(48, 81%, 48%);
 
   /* font-families */
   --ff-primary: "Dancing Script", cursive;
@@ -43,15 +45,9 @@
   --fs-secondary-headings: var(--fs-350);
   --fs-primary-pheadings: var(--fs-150);
   --fs-body: var(--fs-100);
-}
 
-@media (max-width: 100px) {
-  :root {
-    --fs-primaryheadings: var(--fs-700);
-    --fs-secondary-headings: var(--fs-600);
-    --fs-primary-pheadings: var(--fs-500);
-    --fs-body: var(--fs-500);
-  }
+  /* Gaps */
+  --gap-10: 1rem;
 }
 * {
   box-sizing: border-box;
@@ -64,4 +60,20 @@ html {
 }
 body {
   padding: 0.5rem 2rem;
+  background: var(--clr-primary-400);
+  font-family: var(--ff-tertiary);
+}
+h3,
+h4,
+p {
+  font-weight: var(--fw-medium);
+}
+
+@media (min-width: 1025px) {
+  :root {
+    --fs-primary-headings: var(--fs-700);
+    --fs-secondary-headings: var(--fs-600);
+    --fs-primary-pheadings: var(--fs-500);
+    --fs-body: var(--fs-500);
+  }
 }

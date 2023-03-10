@@ -9,9 +9,9 @@
 }
 .wrapper img[alt="bowl of grains"] {
   position: absolute;
-  right: -15rem;
-  bottom: -10rem;
-  width: 30rem;
+  right: -10rem;
+  bottom: -8rem;
+  width: clamp(20rem, 1vw, 30rem);
 }
 .main {
   position: relative;
@@ -21,18 +21,46 @@
   height: 80vh;
   overflow-y: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
+  color: var(--clr-primary-900);
 }
 .main .page {
-  padding: 0.5rem;
   height: 100%;
   scroll-snap-align: center;
+  padding: 1rem;
+}
+.intro {
+  line-height: 4rem;
+}
+.intro h2 {
+  inline-size: clamp(200px, 50vw, 800px);
+  overflow-wrap: break-word;
+  font-family: var(--ff-ph);
+  font-size: var(--fs-primary-headings);
+  font-weight: var(--fw-bold);
 }
 
 .STD {
   /*Scroll to discover*/
   position: sticky;
-  bottom: 0;
+  bottom: 1rem;
   width: 100%;
   text-align: center;
+  color: var(--clr-primary-700);
+  font-size: var(--fs-150);
+}
+
+@media (min-width: 1025px) {
+  .main .page {
+    padding: 5rem;
+  }
+  .intro {
+    line-height: 5rem;
+    width: 100%;
+  }
+
+  .wrapper img[alt="bowl of grains"] {
+    right: -23rem;
+    width: 60rem;
+  }
 }

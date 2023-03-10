@@ -9,7 +9,7 @@ export default function Home() {
     //   <Link href={"/products"}>Products</Link>
     // <Link href={"/cart"}>Cart</Link> */}
       <div className={styles.main}>
-        <div className={`${styles.intro} ${styles.page}`}>
+        <div className={`${styles.page} ${styles.intro}`}>
           <h2>
             Your health is our business. So the choice is yours to make you
             healthy.
