@@ -1,7 +1,11 @@
 .footer {
   display: none;
   margin-top: 0.5rem;
+  gap: var(--footer-gaps);
   color: var(--clr-primary-700);
+}
+.footer h3 {
+  font-size: var(--fs-300);
 }
 
 @media (min-width: 1024px) {

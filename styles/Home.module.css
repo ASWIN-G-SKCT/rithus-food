@@ -56,12 +56,13 @@
 }
 
 @media (min-width: 1025px) {
-  .main .page {
-    padding: 8rem;
-  }
   .main .intro {
+    padding: 8rem;
     line-height: 6rem;
     width: 100%;
+  }
+  .main .page {
+    padding: 6rem;
   }
 
   .wrapper img[alt="bowl of grains"] {
