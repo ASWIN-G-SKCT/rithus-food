@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "styles/Home.module.css";
 import Image from "next/image";
 import useMousePosition from "hooks/useMousePosition";
+import ProductName from "components/home_page/ProductName";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,6 +25,44 @@ export default function Home() {
             healthy.
           </h2>
         </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="01" pageName="Rice Powder Varieties" />
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="02" pageName="Nut Powder Varieties" />
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="03" pageName="Travel Food Varieties" />
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="04" pageName="Instant Drink Mix" />
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="05" pageName="Founder's Note" />
+          <div className={styles.foundersNote}>
+            <p>From K Swathi</p>
+            <p>
+              When I started making baby food products, we were able to see the
+              difference in quality from most products in the market. We felt
+              safe using it on our infant. I then started a small scale women
+              based unit, where I employ local expert mothers to make Rithus
+              food products by natural and ayurvedic formulations of
+              ingredients, which is 100% safe and best in quality. Our products
+              can now be used from 6+ months babies to adults.
+            </p>
+          </div>
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="06" pageName="Contact Us" />
+          <div className="contactUs">
+            <p>rithusbabyfoods@gmail.com</p>
+            <p>+91 8110933444</p>
+          </div>
+        </div>
+        <div className={`${styles.page}`}>
+          <ProductName page="07" pageName="Testimonials" />
+        </div>
+
         <div className={`${styles.page}`}>
           <h2>
             Your health is our business. So the choice is yours to make you
