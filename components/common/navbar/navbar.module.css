@@ -7,7 +7,7 @@
   color: var(--clr-primary-900);
 }
 .moms_choice {
-  display: none;
+  /* display: none; */
 }
 .actions {
   display: flex;

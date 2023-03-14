@@ -1,7 +1,11 @@
 import Link from "next/link";
 import styles from "styles/Home.module.css";
 import Image from "next/image";
+import useMousePosition from "hooks/useMousePosition";
+
 export default function Home() {
+  const { x, y } = useMousePosition();
+  console.log(x, y);
   return (
     <>
       {/* <Link href={"/login"}>Login</Link>
@@ -19,6 +23,7 @@ export default function Home() {
           <h2>
             Your health is our business. So the choice is yours to make you
             healthy.
+            {x} {y}
           </h2>
         </div>
         <div className={styles.STD}>
@@ -30,7 +35,13 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.wrapper}>
-        <Image src={require("public/Assets/Bowl.svg")} alt="bowl of grains" />
+        <Image
+          src={require("public/Assets/Bowl.svg")}
+          alt="bowl of grains"
+          style={{
+            translate: `${x}px ${y}px`,
+          }}
+        />
       </div>
     </>
   );
