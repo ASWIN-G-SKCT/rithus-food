@@ -26,19 +26,19 @@ export default function Home() {
           </h2>
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="01" pageName="Rice Powder Varieties" />
+          <ProductName page="01" pageName={`Rice Powder \nVarieties`} />
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="02" pageName="Nut Powder Varieties" />
+          <ProductName page="02" pageName={`Nut Powder \nVarieties`} />
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="03" pageName="Travel Food Varieties" />
+          <ProductName page="03" pageName={`Travel Food \nVarieties`} />
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="04" pageName="Instant Drink Mix" />
+          <ProductName page="04" pageName={`Instant Drink \nMix`} />
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="05" pageName="Founder's Note" />
+          <ProductName page="05" pageName={`Founders \nNote`} />
           <div className={styles.foundersNote}>
             <p>From K Swathi</p>
             <p>
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="06" pageName="Contact Us" />
+          <ProductName page="06" pageName={`Contact \nUs`} />
           <div className="contactUs">
             <p>rithusbabyfoods@gmail.com</p>
             <p>+91 8110933444</p>
