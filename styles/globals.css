@@ -75,9 +75,6 @@
   --qty-gap: 1.625rem; /* quantity choosing */
   --product-benifits-image-gap: 2.75rem; /* product benifits image gap*/
   --product-items-gaps: 1.625rem; /* product items gap of the component */
-
-  /* Gaps */
-  --gap-10: 1rem;
 }
 * {
   box-sizing: border-box;
