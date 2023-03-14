@@ -7,7 +7,7 @@
   color: var(--clr-primary-900);
 }
 .moms_choice {
-  /* display: none; */
+  display: none;
 }
 .actions {
   display: flex;
@@ -18,4 +18,10 @@
 }
 .logo h1:nth-child(2) {
   color: var(--clr-accent-100);
+}
+
+@media (min-width: 1024px) {
+  .moms_choice {
+    display: inline;
+  }
 }

@@ -76,4 +76,7 @@ p {
     --fs-primary-pheadings: var(--fs-500);
     --fs-body: var(--fs-500);
   }
+  body {
+    padding: 0.5rem 8rem;
+  }
 }

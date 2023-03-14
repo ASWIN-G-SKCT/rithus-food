@@ -9,9 +9,10 @@
 }
 .wrapper img[alt="bowl of grains"] {
   position: absolute;
-  right: -10rem;
-  bottom: -8rem;
+  right: -9.5rem;
+  bottom: -9rem;
   width: clamp(20rem, 1vw, 30rem);
+  transition: translate 0.5s ease-in-out;
 }
 .main {
   position: relative;
@@ -62,5 +63,6 @@
   .wrapper img[alt="bowl of grains"] {
     right: -23rem;
     width: 60rem;
+    transition: translate 0s ease-in-out;
   }
 }
