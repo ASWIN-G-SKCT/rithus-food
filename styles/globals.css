@@ -46,6 +46,36 @@
   --fs-primary-pheadings: var(--fs-150);
   --fs-body: var(--fs-100);
 
+  /* gaps,spacing and heights*/
+  /* common */
+  --navbar-gap: 0.688rem;
+  --footer-text-gaps: 32.75rem; /* footer copyrights text spacing */
+  --footer-gaps: 0.625rem; /* footer */
+  --letter-spacing: 0.06em;
+  --home-pagination-gaps: 2.063rem; /* pagination indicator */
+  --category-gap: 0.625rem; /* category gaps */
+  --stars-gaps: 0.313rem; /*rating indicator */
+  --text-line-height: 1.313rem; /* text line height */
+
+  /* Home Screen */
+  --quote-line-height: 3rem; /* quote line spacing */
+
+  /* founder's note */
+  --founders-note-line-height: 1.625rem; /* founder's note line height */
+
+  /* TestimonialsPage */
+  --testimonials-gap: 0.313rem;
+
+  /* Category page */
+  --catergory-list-gap: 0.25rem; /* categories list dropdown */
+  --product-gap: 0.375rem; /* product gaps */
+
+  /* Product page */
+  --product-brief-details-gap: 0.625rem; /* product details component*/
+  --qty-gap: 1.625rem; /* quantity choosing */
+  --product-benifits-image-gap: 2.75rem; /* product benifits image gap*/
+  --product-items-gaps: 1.625rem; /* product items gap of the component */
+
   /* Gaps */
   --gap-10: 1rem;
 }
@@ -75,8 +105,33 @@ p {
     --fs-secondary-headings: var(--fs-600);
     --fs-primary-pheadings: var(--fs-500);
     --fs-body: var(--fs-500);
+    --line-height: 2rem;
+
+    --navbar-gap: 1rem;
+    --stars-gaps: 0.625rem;
+    --category-gap: 3.5rem;
+    --letter-spacing: 0.08em;
+    --text-line-height: 2rem; /* text line height */
+
+    --quote-line-height: 5.25rem;
+    --founders-note-line-height: 3.5rem;
+    --testimonials-gap: 0.125rem;
+    --category-list-gap: 2rem; /* product list gap */
+    --product-gap: 0.75rem;
+    --products-descripton-line-height: 2rem;
+    --Product-card-gap: 1.75rem; /* product-card gap */
+    --product-brief-details-gap: 1rem;
+    --qty-gap: 1.625rem;
+    --product-benifits-image-gap: 8.375rem;
+    --product-items-gaps: 5.25rem; /* product items gap of the component */
   }
-  body {
-    padding: 0.5rem 8.75rem;
+
+  @media (min-width: 700px) {
+    :root {
+      --fs-primaryheadings: var(--fs-700);
+      --fs-secondary-headings: var(--fs-600);
+      --fs-primary-pheadings: var(--fs-500);
+      --fs-body: var(--fs-500);
+    }
   }
 }
