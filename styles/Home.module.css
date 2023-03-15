@@ -30,9 +30,12 @@
   color: var(--clr-primary-900);
 }
 .main .page {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   scroll-snap-align: center;
   padding: 1rem;
+  gap: 1rem;
 }
 .main .intro {
   line-height: 4rem;
@@ -56,13 +59,16 @@
 }
 
 @media (min-width: 1025px) {
+  .main .page {
+    flex-direction: row;
+    padding: 3rem 5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
   .main .intro {
     padding: 8rem;
     line-height: 6rem;
     width: 100%;
-  }
-  .main .page {
-    padding: 3rem;
   }
 
   .wrapper img[alt="bowl of grains"] {
