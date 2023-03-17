@@ -44,7 +44,7 @@
   --fs-primary-headings: var(--fs-500);
   --fs-secondary-headings: var(--fs-350);
   --fs-primary-pheadings: var(--fs-150);
-  --fs-body: var(--fs-100);
+  --fs-body: var(--fs-300);
 
   /* gaps,spacing and heights*/
   /* common */
@@ -94,7 +94,6 @@ body {
   padding: 1rem 2rem;
   background: var(--clr-primary-400);
   font-family: var(--ff-tertiary);
-  line-height: var(--text-line-height);
 }
 
 h1,
@@ -106,7 +105,7 @@ h6,
 p,
 ol,
 ul {
-  font-size: var(--fs-150);
+  /* font-size: var(--fs-150); */
   font-weight: normal;
 }
 

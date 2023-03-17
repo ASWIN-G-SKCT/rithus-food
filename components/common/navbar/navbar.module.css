@@ -21,6 +21,7 @@
 }
 .logo {
   text-align: center;
+  line-height: 2rem;
 }
 .logo h1 {
   font-size: 28px;
@@ -33,7 +34,7 @@
 
 @media (min-width: 1024px) {
   .logo h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .logo h1:nth-child(2) {
     font-size: 35px;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 
-const FieldArray = ({ control }) => {
+const FieldArray = ({ control }: any) => {
   const {
     fields,
     append: appendIngredient,
