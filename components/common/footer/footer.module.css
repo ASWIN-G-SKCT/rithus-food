@@ -1,6 +1,6 @@
 .footer {
   display: none;
-  margin-top: 0.5rem;
+  width: var(--home-page-padding);
   gap: var(--footer-gaps);
   color: var(--clr-primary-700);
 }
@@ -10,6 +10,8 @@
 
 @media (min-width: 1024px) {
   .footer {
+    position: absolute;
+    bottom: -2rem;
     display: flex;
     align-items: center;
   }

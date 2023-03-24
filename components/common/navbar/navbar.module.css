@@ -1,10 +1,14 @@
 .navbar {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  width: var(--home-page-padding);
   color: var(--clr-primary-900);
+  z-index: 1;
 }
 .logo,
 .actions > *,
@@ -21,7 +25,6 @@
 }
 .logo {
   text-align: center;
-  line-height: 2rem;
 }
 .logo h1 {
   font-size: 28px;

@@ -4,6 +4,7 @@ import styles from "styles/Home.module.css";
 import Image from "next/image";
 import useMousePosition from "hooks/useMousePosition";
 import ProductName from "components/home_page/ProductName";
+import Footer from "components/common/footer";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,13 +14,9 @@ export default function Home() {
     setCurrentPage(page);
   };
   return (
-    <>
-      {/* <Link href={"/login"}>Login</Link>
-    //   <Link href={"/register"}>Register</Link>
-    //   <Link href={"/products"}>Products</Link>
-    // <Link href={"/cart"}>Cart</Link> */}
+    <div className={styles.wrapper}>
       <div className={styles.main}>
-        <div className={`${styles.page} ${styles.intro}`}>
+        {/* <div className={`${styles.page} ${styles.intro}`}>
           <h2>
             Your health is our business. So the choice is yours to make you
             healthy.
@@ -38,9 +35,9 @@ export default function Home() {
           <ProductName page="04" pageName={`Instant Drink \nMix`} />
         </div>
         <div className={`${styles.page}`}>
-          <ProductName page="05" pageName={`Founders \nNote`} />
-          <div className={styles.foundersNote}>
-            <p>From K Swathi</p>
+          <ProductName page="05" pageName={`Founder's \nNote`} />
+          <div className={styles.founders_note}>
+            <p>From K Swathi ,</p>
             <p>
               When I started making baby food products, we were able to see the
               difference in quality from most products in the market. We felt
@@ -54,8 +51,8 @@ export default function Home() {
         </div>
         <div className={`${styles.page}`}>
           <ProductName page="06" pageName={`Contact \nUs`} />
-          <div className="contactUs">
-            <p>rithusbabyfoods@gmail.com</p>
+          <div className={styles.contact_us}>
+            <p>Rithusbabyfoods@Gmail.Com</p>
             <p>+91 8110933444</p>
           </div>
         </div>
@@ -77,15 +74,7 @@ export default function Home() {
           />
           <h4>Scroll to discover</h4>
         </div>
-      </div>
-      <div className={styles.wrapper}>
-        <Image
-          src={require("public/Assets/Bowl.svg")}
-          alt="bowl of grains"
-          style={{
-            translate: `${x}px ${y}px`,
-          }}
-        />
+
         <div className={styles.pagination}>
           <div
             className={`${styles.page_dot} ${
@@ -136,7 +125,38 @@ export default function Home() {
             onClick={() => paginationHandler(8)}
           ></div>
         </div>
+        <Image
+          src={require("public/Assets/Bowl.svg")}
+          alt="bowl of grains"
+          style={{
+            translate: `${x}px ${y}px`,
+          }}
+        />
+        <div className={styles.contact_us_props}>
+          <Image
+            src={require("public/Assets/Props/almond.svg")}
+            alt="CUAlmond"
+            style={{
+              translate: `${-x + 2}px ${-y + 1}px`,
+            }}
+          />
+          <Image
+            src={require("public/Assets/Props/pista.svg")}
+            alt="CUPista"
+            style={{
+              translate: `${x + 4}px ${-y + 2}px`,
+            }}
+          />
+          <Image
+            src={require("public/Assets/Props/haslenut.svg")}
+            alt="CUHasle"
+            style={{
+              translate: `${-x + 3}px ${y + 1}px`,
+            }}
+          />
+        </div> */}
+        <Footer />
       </div>
-    </>
+    </div>
   );
 }

@@ -1,41 +1,50 @@
 .wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
 }
-.wrapper img[alt="bowl of grains"] {
+.wrapper .parallax_img {
+  display: none;
   position: absolute;
-  right: -9.5rem;
-  bottom: -9rem;
-  width: clamp(20rem, 1vw, 30rem);
   transition: translate 0.5s ease-in-out;
+}
+.wrapper img[alt="bowl of grains"] {
+  width: clamp(20rem, 1vw, 30rem);
+}
+.wrapper img[alt="CUAlmond"] {
+  width: 2rem;
+}
+.wrapper img[alt="CUPista"] {
+  width: 2rem;
+}
+.wrapper img[alt="CUHasle"] {
+  right: 12rem;
+  top: 13rem;
+  width: 1.5rem;
 }
 .pagination {
   display: none;
 }
 
 .main {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   background-image: url("../public/Assets/Dot\ Grid\ Pattern.svg");
   background-position: center;
-  width: 100%;
-  height: 80vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  width: var(--home-page-padding);
+  height: var(--home-page-height);
+  border: 1px solid #000;
   color: var(--clr-primary-900);
 }
 .main .page {
   display: flex;
   flex-direction: column;
   height: 100%;
-  scroll-snap-align: center;
-  padding: 1rem;
-  gap: 1rem;
+  font-size: var(--fs-body);
 }
 .main .intro {
   line-height: 4rem;
@@ -48,6 +57,17 @@
   font-weight: var(--fw-bold);
 }
 
+.page .founders_note {
+  font-family: var(--ff-primary);
+  line-height: var(--founders-note-line-height);
+  text-align: justify;
+}
+.page .contact_us {
+  text-align: center;
+}
+.page .contact_us p:first-child {
+  font-family: var(--ff-primary);
+}
 .STD {
   /*Scroll to discover*/
   position: sticky;
@@ -61,20 +81,40 @@
 @media (min-width: 1025px) {
   .main .page {
     flex-direction: row;
-    padding: 3rem 5rem;
+    padding: 2rem 8rem;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
   }
   .main .intro {
     padding: 8rem;
     line-height: 6rem;
     width: 100%;
   }
-
+  .wrapper img {
+    transition: translate 0s ease-in-out;
+  }
   .wrapper img[alt="bowl of grains"] {
     right: -23rem;
     width: 60rem;
-    transition: translate 0s ease-in-out;
+  }
+  .wrapper img[alt="CUAlmond"] {
+    right: 50vw;
+    top: 32vh;
+    width: 8.8rem;
+  }
+  .wrapper img[alt="CUPista"] {
+    right: 15rem;
+    top: 16.5rem;
+    width: 8.8rem;
+  }
+  .wrapper img[alt="CUHasle"] {
+    right: 31rem;
+    top: 27rem;
+    width: 8.8rem;
+  }
+  .page .contact_us {
+    font-size: var(--fs-600);
   }
   .pagination {
     display: flex;
@@ -88,8 +128,8 @@
     left: 60px;
   }
   .pagination .page_dot {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: var(--clr-primary-800);
     transform-origin: center center;
@@ -99,7 +139,7 @@
   }
 
   .pagination .page_dot.active {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 }
