@@ -78,7 +78,7 @@
 
   /* Home page padding */
   --home-page-padding: 85%; /* width*/
-  --home-page-height: 80%;
+  --home-page-height: 85%;
 }
 * {
   box-sizing: border-box;
@@ -138,7 +138,7 @@ ul {
     --product-benifits-image-gap: 8.375rem;
     --product-items-gaps: 5.25rem; /* product items gap of the component */
 
-    --home-page-height: 75%;
+    --home-page-height: 80%;
   }
 
   @media (min-width: 700px) {

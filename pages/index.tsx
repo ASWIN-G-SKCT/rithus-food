@@ -66,7 +66,7 @@ export default function Home() {
             healthy.
             {x} {y}
           </h2>
-        </div>
+        </div> */}
         <div className={styles.STD}>
           <Image
             src={require("public/Icons/Arrow.svg")}
@@ -126,13 +126,14 @@ export default function Home() {
           ></div>
         </div>
         <Image
+          className={styles.parallax_img}
           src={require("public/Assets/Bowl.svg")}
           alt="bowl of grains"
           style={{
             translate: `${x}px ${y}px`,
           }}
         />
-        <div className={styles.contact_us_props}>
+        {/* <div className={styles.contact_us_props}>
           <Image
             src={require("public/Assets/Props/almond.svg")}
             alt="CUAlmond"

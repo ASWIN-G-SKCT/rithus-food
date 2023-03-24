@@ -6,11 +6,12 @@
   pointer-events: none;
 }
 .wrapper .parallax_img {
-  display: none;
   position: absolute;
   transition: translate 0.5s ease-in-out;
 }
 .wrapper img[alt="bowl of grains"] {
+  right: -45%;
+  bottom: -30%;
   width: clamp(20rem, 1vw, 30rem);
 }
 .wrapper img[alt="CUAlmond"] {
@@ -25,12 +26,21 @@
   width: 1.5rem;
 }
 .pagination {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 32px;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -5%;
   display: none;
 }
 
 .main {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   translate: -50% -50%;
   background-image: url("../public/Assets/Dot\ Grid\ Pattern.svg");
@@ -70,7 +80,7 @@
 }
 .STD {
   /*Scroll to discover*/
-  position: sticky;
+  position: absolute;
   bottom: 1rem;
   width: 100%;
   text-align: center;
@@ -91,11 +101,10 @@
     line-height: 6rem;
     width: 100%;
   }
-  .wrapper img {
+  .wrapper .parallax_img {
     transition: translate 0s ease-in-out;
   }
   .wrapper img[alt="bowl of grains"] {
-    right: -23rem;
     width: 60rem;
   }
   .wrapper img[alt="CUAlmond"] {
@@ -118,14 +127,6 @@
   }
   .pagination {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 32px;
-    height: 60vh;
-    position: absolute;
-    top: 165px;
-    left: 60px;
   }
   .pagination .page_dot {
     width: 12px;
