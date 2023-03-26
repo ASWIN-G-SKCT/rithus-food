@@ -3,11 +3,12 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  pointer-events: none;
+
+  /* pointer-events: none; */
 }
 .wrapper .parallax_img {
   position: absolute;
-  transition: translate 0.5s ease-in-out;
+  transition: translate 0.4s ease-in-out, rotate 0s, translateX 0s;
 }
 .wrapper img[alt="bowl of grains"] {
   right: -45%;
@@ -36,6 +37,7 @@
   transform: translateY(-50%);
   left: -5%;
   display: none;
+  z-index: 10;
 }
 
 .main {
@@ -47,19 +49,27 @@
   background-position: center;
   width: var(--home-page-padding);
   height: var(--home-page-height);
-  border: 1px solid #000;
+
   color: var(--clr-primary-900);
 }
-.main .page {
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #00000044;
   display: flex;
   flex-direction: column;
-  height: 100%;
   font-size: var(--fs-body);
+  pointer-events: none;
+  transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.main .intro {
+.intro {
   line-height: 4rem;
 }
 .intro h2 {
+  position: inherit;
+  top: 15%;
+  left: 15%;
   inline-size: clamp(200px, 50vw, 800px);
   overflow-wrap: break-word;
   font-family: var(--ff-ph);
@@ -89,20 +99,21 @@
 }
 
 @media (min-width: 1025px) {
-  .main .page {
+  .page {
     flex-direction: row;
-    padding: 2rem 8rem;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
   }
-  .main .intro {
-    padding: 8rem;
+  .intro {
     line-height: 6rem;
     width: 100%;
   }
+  .intro h2 {
+    top: 20%;
+  }
   .wrapper .parallax_img {
-    transition: translate 0s ease-in-out;
+    transition: translate 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+      rotate 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   .wrapper img[alt="bowl of grains"] {
     width: 60rem;
@@ -134,8 +145,7 @@
     border-radius: 50%;
     background: var(--clr-primary-800);
     transform-origin: center center;
-    transition: width 0.3s, height 0.3s linear;
-    pointer-events: all;
+    transition: 0.2s linear;
     cursor: pointer;
   }
 
