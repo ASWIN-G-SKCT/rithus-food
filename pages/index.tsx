@@ -132,11 +132,57 @@ export default function Home() {
             src={require("public/Assets/Products/RedRicePowder.svg")}
             alt="red rice powder"
             style={{
-              translate: `${x}px ${y}px`,
+              translate: `${-x}px ${-y}px`,
             }}
           />
         </div>
-
+        <div className={styles.redRiceProps}>
+          <div
+            className={`${styles.page} ${styles.propImg1} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 1)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/redRice.svg")}
+              alt="red rice"
+              style={{
+                translate: `${x + 2}px ${y - 3}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.page} ${styles.propImg2} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 1)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/spoonRight.svg")}
+              alt="spoon with flour right"
+              style={{
+                translate: `${-x}px ${y + 2}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.page} ${styles.propImg3} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 1)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/spoonWhiteFlour.svg")}
+              alt="spoon with white flour"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+        </div>
         <div
           className={`${styles.page} ${styles.title}`}
           style={{
