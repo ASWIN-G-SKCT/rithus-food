@@ -4,7 +4,7 @@ import styles from "./ProductName.module.css";
 function ProductName(props: any) {
   return (
     <div className={styles.container}>
-      <h5>.{props.page}.</h5>
+      <h5>.0{props.page}.</h5>
       <h3>{props.pageName}</h3>
       <div className={styles.cube} />
     </div>
