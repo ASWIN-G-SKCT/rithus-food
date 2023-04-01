@@ -303,6 +303,7 @@ export default function Home() {
             />
           </div>
         </div>
+        {/* Travel Food */}
         <div
           className={`${styles.page} ${styles.title}`}
           style={{
@@ -315,6 +316,99 @@ export default function Home() {
             currentPage={currentPage}
           />
         </div>
+        <div
+          className={`${styles.page} ${styles.productImg} `}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 3)}%)`,
+          }}
+        >
+          <Image
+            className={styles.parallax_img}
+            src={require("public/Assets/Products/oatsCerealMix.svg")}
+            alt="oats cereal mix"
+            style={{
+              translate: `${-x}px ${-y}px`,
+            }}
+          />
+        </div>
+        <div className={`${styles.oatsCerealProps}`}>
+          <div
+            className={`${styles.prop} ${styles.propImg1} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 3)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/oatBowl.svg")}
+              alt="oat Bowl"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg2} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 3)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/almond2.svg")}
+              alt="almond2"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg3} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 3)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/pista2.svg")}
+              alt="pista2"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg4} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 3)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/hasleNut.svg")}
+              alt="hasle Nut"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg5} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 3)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/elachi.svg")}
+              alt="elachi"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+        </div>
+        {/* Instant Drink  */}
         <div
           className={`${styles.page} ${styles.title}`}
           style={{
