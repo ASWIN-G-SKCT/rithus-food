@@ -68,9 +68,31 @@
   line-height: 4rem;
   transition: transform 1.2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
+
 .page.productImg {
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
+}
+.page.productImg img {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  margin-inline: auto;
+  height: fit-content;
+  width: fit-content;
+
+  width: clamp(13rem, 40vw, 30rem);
+}
+.page.productImg img[alt="instant drink 1"] {
+  left: -30%;
+  bottom: 30%;
+  height: 15rem;
+}
+.page.productImg img[alt="instant drink 2"] {
+  right: -30%;
+  width: 15rem;
 }
 .prop.propImg1,
 .prop.propImg2,
@@ -124,17 +146,6 @@
 }
 .prop.propImg6 img {
   width: clamp(5rem, 20vw, 20rem);
-}
-.page.productImg img {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 25%;
-  margin-inline: auto;
-  height: fit-content;
-  width: fit-content;
-  width: clamp(13rem, 40vw, 30rem);
 }
 
 .redRiceProps .prop.propImg1 img {
@@ -195,6 +206,22 @@
 .oatsCerealProps .prop.propImg5 img {
   right: 1%;
   top: 10%;
+}
+.instantDrinkProps .prop.propImg1 img {
+  left: 0%;
+  bottom: 20%;
+}
+.instantDrinkProps .prop.propImg2 {
+  z-index: 15;
+}
+.instantDrinkProps .prop.propImg2 img {
+  right: 10%;
+  bottom: 22%;
+}
+.instantDrinkProps .prop.propImg3 img {
+  top: 20%;
+  right: 22%;
+  width: clamp(2rem, 10vw, 10rem);
 }
 
 .page .founders_note {

@@ -421,6 +421,84 @@ export default function Home() {
             currentPage={currentPage}
           />
         </div>
+        <div
+          className={`${styles.page} ${styles.productImg} `}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 4)}%)`,
+          }}
+        >
+          <Image
+            className={styles.parallax_img}
+            src={require("public/Assets/Products/instantDrink1.svg")}
+            alt="instant  drink 1"
+            style={{
+              translate: `${-x}px ${-y}px`,
+            }}
+          />
+        </div>
+        <div
+          className={`${styles.page} ${styles.productImg} `}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 4)}%)`,
+          }}
+        >
+          <Image
+            className={styles.parallax_img}
+            src={require("public/Assets/Products/instantDrink2.svg")}
+            alt="instant  drink 2"
+            style={{
+              translate: `${-x}px ${-y}px`,
+            }}
+          />
+        </div>
+        <div className={`${styles.instantDrinkProps}`}>
+          <div
+            className={`${styles.prop} ${styles.propImg1} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 4)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/carrot.svg")}
+              alt="carrot"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg2} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 4)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocoPowder.svg")}
+              alt="choco powder"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg3} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 4)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolateDrop.svg")}
+              alt="chocolate drop"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+        </div>
+
         {/*<div className={`${styles.page}`}>
           <ProductName page="05" pageName={`Founder's \nNote`} />
           <div className={styles.founders_note}>
