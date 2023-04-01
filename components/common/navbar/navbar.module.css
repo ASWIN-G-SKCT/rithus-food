@@ -1,3 +1,11 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -8,7 +16,7 @@
   align-items: center;
   width: var(--home-page-padding);
   color: var(--clr-primary-900);
-  z-index: 1;
+  z-index: 30;
 }
 .logo,
 .actions > *,
@@ -35,6 +43,37 @@
   color: var(--clr-accent-100);
 }
 
+.menu {
+  position: absolute;
+  width: 100vw;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--clr-primary-400);
+  z-index: 20;
+  transition: height 0.8s ease-in-out;
+}
+.menu.active {
+  height: 100%;
+}
+.menu h2 {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.menu h2:nth-child(1) {
+  top: 40%;
+  transition: transform 1.5s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+}
+.menu h2:nth-child(2) {
+  top: 45%;
+  transition: transform 1.8s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+}
+.menu h2:nth-child(3) {
+  top: 50%;
+  transition: transform 2.1s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+}
 @media (min-width: 1024px) {
   .logo h1 {
     font-size: 40px;
