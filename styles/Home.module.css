@@ -42,7 +42,8 @@
   height: var(--home-page-height);
   color: var(--clr-primary-900);
 }
-.page {
+.page,
+.prop {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -71,30 +72,58 @@
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
 }
-.page.propImg1,
-.page.propImg2,
-.page.propImg3 {
+.prop.propImg1,
+.prop.propImg2,
+.prop.propImg3,
+.prop.propImg4,
+.prop.propImg5,
+.prop.propImg6 {
   display: block;
   position: absolute;
 }
-.page.propImg1 {
+.prop.propImg1 {
   transition: transform 3s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
-.page.propImg2 {
+.prop.propImg2 {
   transition: transform 2.5s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
-.page.propImg3 {
+.prop.propImg3 {
   transition: transform 1.8s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 15;
 }
-.page.propImg1 img {
+.prop.propImg4 {
+  transition: transform 1.5s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+  z-index: 15;
+}
+.prop.propImg5 {
+  transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+  z-index: 15;
+}
+.prop.propImg6 {
+  transition: transform 2.3s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+  z-index: 15;
+}
+.prop img {
+  height: fit-content;
+  width: fit-content;
+}
+.prop.propImg1 img {
   width: clamp(13rem, 30vw, 25rem);
 }
-.page.propImg2 img {
+.prop.propImg2 img {
   width: clamp(10rem, 30vw, 20rem);
 }
-.page.propImg3 img {
+.prop.propImg3 img {
   width: clamp(12rem, 40vw, 25rem);
+}
+.prop.propImg4 img {
+  width: clamp(7rem, 18vw, 15rem);
+}
+.prop.propImg5 img {
+  width: clamp(4rem, 20vw, 15rem);
+}
+.prop.propImg6 img {
+  width: clamp(5rem, 20vw, 20rem);
 }
 .page.productImg img {
   display: block;
@@ -105,18 +134,46 @@
   margin-inline: auto;
   width: clamp(13rem, 40vw, 30rem);
 }
-.redRiceProps .page.propImg1 img {
+.page.productImg img[alt="nut and seeds powder"] {
+  bottom: 25%;
+}
+.redRiceProps .prop.propImg1 img {
   left: 50%;
   bottom: 10%;
 }
-.redRiceProps .page.propImg2 img {
+.redRiceProps .prop.propImg2 img {
   right: -1rem;
   top: 0%;
 }
-.redRiceProps .page.propImg3 img {
-  left: 5%;
-  bottom: 5%;
+.redRiceProps .prop.propImg3 img {
+  left: 4%;
+  bottom: 10%;
   rotate: -15deg;
+}
+.nutPowderProps .prop.propImg1 img {
+  right: 5%;
+  bottom: 15%;
+}
+.nutPowderProps .prop.propImg2 img {
+  left: 2%;
+  bottom: 15%;
+}
+.nutPowderProps .prop.propImg3 img {
+  right: 2%;
+  bottom: 50%;
+  width: clamp(8rem, 30vw, 15rem);
+}
+.nutPowderProps .prop.propImg4 img {
+  left: 10%;
+  top: 30%;
+}
+.nutPowderProps .prop.propImg5 img {
+  right: 2%;
+  top: 15%;
+}
+.nutPowderProps .prop.propImg6 img {
+  left: 2%;
+  bottom: 5%;
 }
 
 .page .founders_note {
