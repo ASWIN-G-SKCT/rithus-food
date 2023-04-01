@@ -54,6 +54,21 @@ const Navbar = () => {
         >
           Contact Us
         </h2>
+        <div
+          className={styles.socialMedia}
+          style={{
+            transform: `translateY(${100 * (menu ? 0 : 100)}%)`,
+          }}
+        >
+          <Image
+            src={require("public/Icons/whatsapp.svg")}
+            alt="whatsapp icon"
+          />
+          <Image
+            src={require("public/Icons/instagram.svg")}
+            alt="instagram icon"
+          />
+        </div>
         <footer
           className={styles.footer}
           style={{

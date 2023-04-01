@@ -74,13 +74,18 @@
   top: 50%;
   transition: transform 2.1s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
-
+.menu .socialMedia {
+  top: 55%;
+  display: flex;
+  gap: 1rem;
+  transition: transform 2.4s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+}
 .footer {
   display: flex;
   justify-content: center;
   color: var(--clr-primary-700);
   width: 80%;
-  top: 60%;
+  top: 62%;
   transition: transform 2.7s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
 .footer h3 {
