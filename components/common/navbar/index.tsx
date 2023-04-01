@@ -25,11 +25,13 @@ const Navbar = () => {
           <Image src={require("public/Icons/Search.svg")} alt="Search Icon" />
           <Image src={require("public/Icons/User.svg")} alt="User Icon" />
           <Image src={require("public/Icons/Cart.svg")} alt="Cart Icon" />
-          <Image
-            src={require("public/Icons/Burger.svg")}
-            alt="Burger Icon"
+          <div
+            className={`${styles.burgerBtn} ${menu && styles.active}`}
             onClick={() => setMenu(!menu)}
-          />
+          >
+            <div className={styles.line} />
+            <div className={styles.line} />
+          </div>
         </div>
       </div>
       <div className={`${styles.menu} ${menu && styles.active}`}>
