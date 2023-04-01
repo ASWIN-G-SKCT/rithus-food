@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import styles from "./navbar.module.css";
+import Footer from "../footer";
 
 const Navbar = () => {
   const { user } = useSelector((state: any) => state?.auth);
@@ -53,6 +54,24 @@ const Navbar = () => {
         >
           Contact Us
         </h2>
+        <footer
+          className={styles.footer}
+          style={{
+            transform: `translateY(${100 * (menu ? 0 : 100)}%)`,
+          }}
+        >
+          <h3>
+            <Image
+              src={require("public/Icons/Copywrite.svg")}
+              alt="Copywrite icon"
+            />
+            Rithus Foods
+            <Image src={require("public/Icons/Dot.svg")} alt="Dot icon" />
+            Designed by InExore
+            <Image src={require("public/Icons/Dot.svg")} alt="Dot icon" />
+            Policy
+          </h3>
+        </footer>
       </div>
     </div>
   );
