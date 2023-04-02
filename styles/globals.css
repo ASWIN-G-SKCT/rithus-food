@@ -3,9 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&display=swap");
 
 @font-face {
-  font-family: stickyCandy;
-  src: url("/public/Assets/Fonts/Sticky\ Candy.otf"),
-    url("/public/Assets/Fonts/Sticky\ Candy.ttf");
+  font-family: Sticky Candy;
+  src: url("../public/Assets/Fonts/Sticky\ Candy.ttf"),
+    url("../public/Assets/Fonts/Sticky\ Candy.otf");
 }
 
 :root {
@@ -24,7 +24,7 @@
   --ff-primary: "Dancing Script", cursive;
   --ff-secondary: "IBM Plex Sans Condensed", sans-serif;
   --ff-tertiary: "EB Garamond", serif;
-  --ff-logo: var(--ff-pri);
+  --ff-logo: "Sticky Candy";
   --ff-ph: var(--ff-primary);
   --ff-head: var(--ff-secondary);
   --ff-body: var(--ff-secondary);
