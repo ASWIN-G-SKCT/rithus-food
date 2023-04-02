@@ -6,11 +6,21 @@ import useMousePosition from "hooks/useMousePosition";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import ProductName from "components/home_page/ProductName";
 import Footer from "components/common/footer";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const { x, y } = useMousePosition();
+  const { asPath } = useRouter();
 
+  useEffect(() => {
+    if (asPath === "/#FoundersNote") {
+      setCurrentPage(5);
+    }
+    if (asPath === "/#ContactUs") {
+      setCurrentPage(6);
+    }
+  }, [asPath]);
   const paginationHandler = (page: any) => {
     setCurrentPage(page);
   };

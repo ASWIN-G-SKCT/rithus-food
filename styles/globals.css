@@ -111,6 +111,12 @@ ul {
   /* font-size: var(--fs-150); */
   font-weight: normal;
 }
+a:link:not(#exclude),
+a:visited:not(#exclude) {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
 @media (min-width: 1025px) {
   :root {
