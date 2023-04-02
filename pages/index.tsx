@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
+  const [hoverActive, setHoverActive] = useState(false);
   const { x, y } = useMousePosition();
   const router = useRouter();
 
@@ -617,23 +618,84 @@ export default function Home() {
             />
           </div>
         </div>
-        {/*<div className={`${styles.page}`}>
-          <ProductName page="06" pageName={`Contact \nUs`} />
-          <div className={styles.contact_us}>
+        <div
+          className={`${styles.page} ${styles.title}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 6)}%)`,
+          }}
+        >
+          <ProductName page="6" pageName={`Contact \nUs`} />
+        </div>
+        <div
+          className={`${styles.page} ${styles.contactUsPage}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 6)}%)`,
+          }}
+        >
+          <div
+            className={styles.contact_us}
+            onMouseOver={() => setHoverActive(true)}
+            onMouseLeave={() => setHoverActive(false)}
+          >
             <p>Rithusbabyfoods@Gmail.Com</p>
             <p>+91 8110933444</p>
           </div>
         </div>
-        <div className={`${styles.page}`}>
-          <ProductName page="07" pageName="Testimonials" />
+        <div className={`${styles.contactUsProps}`}>
+          <div
+            className={`${styles.prop} ${hoverActive && styles.active} ${
+              styles.propImg1
+            } `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 6)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/almond.svg")}
+              alt="chocolate1"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${hoverActive && styles.active} ${
+              styles.propImg2
+            }`}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 6)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/haslenut.svg")}
+              alt="chocolate2"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${hoverActive && styles.active} ${
+              styles.propImg3
+            } `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 6)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/pista.svg")}
+              alt="chocolate drop"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
         </div>
-
-        <div className={`${styles.page}`}>
-          <h2>
-            Your health is our business. So the choice is yours to make you
-            healthy.
-            {x} {y}
-          </h2>
+        {/* <div className={`${styles.page}`}>
+          <ProductName page="07" pageName="Testimonials" />
         </div> */}
       </div>
     </ReactScrollWheelHandler>

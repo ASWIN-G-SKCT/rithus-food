@@ -70,9 +70,13 @@
 }
 
 .page.productImg,
-.page.foundersPage {
+.page.foundersPage,
+.page.contactUsPage {
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
+}
+.page.contactUsPage {
+  z-index: 0;
 }
 .page.productImg img {
   display: block;
@@ -263,11 +267,40 @@
   bottom: 10%;
   left: 10%;
 }
+
 .page .contact_us {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   text-align: center;
+  width: fit-content;
+  font-size: calc(var(--fs-350) + 1px);
+  pointer-events: all;
 }
 .page .contact_us p:first-child {
   font-family: var(--ff-primary);
+}
+.contactUsProps .prop img {
+  width: clamp(3.5rem, 10vw, 7rem);
+  scale: 0;
+  transform-origin: center;
+  transition: scale 0.8s ease-in-out;
+}
+.contactUsProps .prop.active img {
+  scale: 1;
+}
+.contactUsProps .prop.propImg1 img {
+  left: 14%;
+  top: 42%;
+}
+.contactUsProps .prop.propImg2 img {
+  right: 40%;
+  top: 47%;
+}
+.contactUsProps .prop.propImg3 img {
+  right: 14%;
+  top: 42%;
 }
 .STD {
   /*Scroll to discover*/
