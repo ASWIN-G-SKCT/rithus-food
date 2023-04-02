@@ -92,6 +92,7 @@
   font-weight: var(--fw-500);
   font-family: var(--ff-tertiary);
   text-align: center;
+  width: 80%;
 }
 
 .menu h2:nth-child(1) {

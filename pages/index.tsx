@@ -11,16 +11,20 @@ import { useRouter } from "next/router";
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const { x, y } = useMousePosition();
-  const { asPath } = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
-    if (asPath === "/#FoundersNote") {
+    if (router.asPath === "/#") {
+      setCurrentPage(1);
+    }
+    if (router.asPath === "/#FoundersNote") {
       setCurrentPage(5);
     }
-    if (asPath === "/#ContactUs") {
+    if (router.asPath === "/#ContactUs") {
       setCurrentPage(6);
     }
-  }, [asPath]);
+    router.push("", "/", { shallow: true });
+  }, [router.asPath]);
   const paginationHandler = (page: any) => {
     setCurrentPage(page);
   };

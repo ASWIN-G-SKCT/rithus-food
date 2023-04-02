@@ -18,8 +18,10 @@ const Navbar = () => {
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
         <div className={styles.logo} onClick={closeMenu}>
-          <h1>Rithus</h1>
-          <h1>Foods</h1>
+          <Link href={"/#"} shallow={true}>
+            <h1>Rithus</h1>
+            <h1>Foods</h1>
+          </Link>
         </div>
         {pathname === "/" && user?.admin && <Link href={"/admin"}>Admin</Link>}
         <div className={styles.actions}>
