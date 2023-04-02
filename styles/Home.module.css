@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   overflow: hidden;
   /* pointer-events: none; */
 }
@@ -69,7 +69,8 @@
   transition: transform 1.2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
 }
 
-.page.productImg {
+.page.productImg,
+.page.foundersPage {
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
 }
@@ -225,9 +226,42 @@
 }
 
 .page .founders_note {
+  position: inherit;
+  top: 35%;
+  left: 50%;
+  translate: -50% 0%;
+  width: 70%;
   font-family: var(--ff-primary);
   line-height: var(--founders-note-line-height);
   text-align: justify;
+}
+.foundersNoteProps .prop img {
+  width: clamp(5rem, 20vw, 8rem);
+}
+.foundersNoteProps .prop.propImg3 img,
+.foundersNoteProps .prop.propImg4 img,
+.foundersNoteProps .prop.propImg5 img {
+  width: clamp(1rem, 7vw, 3rem);
+}
+.foundersNoteProps .prop.propImg1 img {
+  right: 5%;
+  top: 25%;
+}
+.foundersNoteProps .prop.propImg2 img {
+  right: 5%;
+  bottom: 5%;
+}
+.foundersNoteProps .prop.propImg3 img {
+  top: 30%;
+  right: 20%;
+}
+.foundersNoteProps .prop.propImg4 img {
+  top: 32%;
+  right: 10%;
+}
+.foundersNoteProps .prop.propImg5 img {
+  bottom: 10%;
+  left: 10%;
 }
 .page .contact_us {
   text-align: center;
@@ -246,6 +280,9 @@
 }
 
 @media (min-width: 1025px) {
+  .wrapper {
+    height: 100vh;
+  }
   .page {
     flex-direction: row;
     align-items: center;

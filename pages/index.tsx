@@ -513,8 +513,20 @@ export default function Home() {
           </div>
         </div>
 
-        {/*<div className={`${styles.page}`}>
-          <ProductName page="05" pageName={`Founder's \nNote`} />
+        <div
+          className={`${styles.page} ${styles.title}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 5)}%)`,
+          }}
+        >
+          <ProductName page="5" pageName={`Founder's \nNote`} />
+        </div>
+        <div
+          className={`${styles.page} ${styles.foundersPage}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 5)}%)`,
+          }}
+        >
           <div className={styles.founders_note}>
             <p>From K Swathi ,</p>
             <p>
@@ -528,7 +540,84 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className={`${styles.page}`}>
+        <div className={`${styles.foundersNoteProps}`}>
+          <div
+            className={`${styles.prop} ${styles.propImg1} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 5)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolate1.svg")}
+              alt="chocolate1"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg2} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 5)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolate2.svg")}
+              alt="chocolate2"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg3} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 5)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolateDrop.svg")}
+              alt="chocolate drop"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg4} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 5)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolateDrop4.svg")}
+              alt="chocolate drop"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+          <div
+            className={`${styles.prop} ${styles.propImg5} `}
+            style={{
+              transform: `translateY(${100 * -(currentPage - 5)}%)`,
+            }}
+          >
+            <Image
+              className={styles.parallax_img}
+              src={require("public/Assets/Props/chocolateDrop2.svg")}
+              alt="chocolate drop 2"
+              style={{
+                translate: `${x + 1}px ${-y}px`,
+              }}
+            />
+          </div>
+        </div>
+        {/*<div className={`${styles.page}`}>
           <ProductName page="06" pageName={`Contact \nUs`} />
           <div className={styles.contact_us}>
             <p>Rithusbabyfoods@Gmail.Com</p>
