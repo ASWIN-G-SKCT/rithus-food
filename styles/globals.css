@@ -104,6 +104,7 @@ html {
 body {
   background: var(--clr-primary-400);
   font-family: var(--ff-tertiary);
+  overscroll-behavior: none;
 }
 
 h1,

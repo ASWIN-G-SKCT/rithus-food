@@ -88,7 +88,7 @@
   height: fit-content;
   width: fit-content;
 
-  width: clamp(13rem, 40vw, 30rem);
+  width: clamp(13rem, 30vw, 25rem);
 }
 .page.productImg img[alt="instant drink 1"] {
   left: -30%;
@@ -113,6 +113,7 @@
 }
 .prop.propImg2 {
   transition: transform 2.5s cubic-bezier(0.72, 0.67, 0.18, 0.93);
+  z-index: 15;
 }
 .prop.propImg3 {
   transition: transform 1.8s cubic-bezier(0.72, 0.67, 0.18, 0.93);
@@ -135,22 +136,22 @@
   width: fit-content;
 }
 .prop.propImg1 img {
-  width: clamp(13rem, 30vw, 25rem);
+  width: clamp(13rem, 25vw, 30rem);
 }
 .prop.propImg2 img {
-  width: clamp(10rem, 30vw, 20rem);
+  width: clamp(10rem, 30vw, 15rem);
 }
 .prop.propImg3 img {
-  width: clamp(12rem, 40vw, 25rem);
+  width: clamp(8rem, 20vw, 12rem);
 }
 .prop.propImg4 img {
-  width: clamp(7rem, 18vw, 15rem);
+  width: clamp(7rem, 18vw, 12rem);
 }
 .prop.propImg5 img {
-  width: clamp(4rem, 20vw, 15rem);
+  width: clamp(4rem, 20vw, 8rem);
 }
 .prop.propImg6 img {
-  width: clamp(5rem, 20vw, 20rem);
+  width: clamp(5rem, 20vw, 12rem);
 }
 
 .redRiceProps .prop.propImg1 img {
@@ -165,6 +166,7 @@
   left: 4%;
   bottom: 10%;
   rotate: -15deg;
+  width: clamp(12rem, 30vw, 20rem);
 }
 .nutPowderProps .prop.propImg1 img {
   right: 5%;
@@ -177,7 +179,6 @@
 .nutPowderProps .prop.propImg3 img {
   right: 2%;
   bottom: 50%;
-  width: clamp(8rem, 30vw, 15rem);
 }
 .nutPowderProps .prop.propImg4 img {
   left: 10%;
@@ -202,7 +203,6 @@
 .oatsCerealProps .prop.propImg3 img {
   right: 5%;
   bottom: 40%;
-  width: clamp(7rem, 20vw, 25rem);
 }
 .oatsCerealProps .prop.propImg4 img {
   right: 1%;
@@ -310,6 +310,175 @@
   text-align: center;
   color: var(--clr-primary-700);
   font-size: var(--fs-150);
+}
+
+@media (min-width: 767px) {
+  .page img,
+  .page.productImg img,
+  .page.productImg img[alt="instant drink 1"],
+  .page.productImg img[alt="instant drink 2"],
+  .redRiceProps .prop.propImg1 img,
+  .redRiceProps .prop.propImg2 img,
+  .redRiceProps .prop.propImg3 img,
+  .nutPowderProps .prop.propImg1 img,
+  .nutPowderProps .prop.propImg2 img,
+  .nutPowderProps .prop.propImg3 img,
+  .nutPowderProps .prop.propImg4 img,
+  .nutPowderProps .prop.propImg5 img,
+  .nutPowderProps .prop.propImg6 img,
+  .oatsCerealProps .prop.propImg1 img,
+  .oatsCerealProps .prop.propImg2 img,
+  .oatsCerealProps .prop.propImg3 img,
+  .oatsCerealProps .prop.propImg4 img,
+  .oatsCerealProps .prop.propImg5 img,
+  .instantDrinkProps .prop.propImg1 img,
+  .instantDrinkProps .prop.propImg2 img,
+  .instantDrinkProps .prop.propImg3 img,
+  .contactUsProps .prop.propImg1 img,
+  .contactUsProps .prop.propImg2 img,
+  .contactUsProps .prop.propImg3 img,
+  .page .founders_note,
+  .page .contact_us {
+    transform: none;
+    translate: initial;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  .page.productImg img,
+  .page.productImg img[alt="instant drink 1"],
+  .page.productImg img[alt="instant drink 2"],
+  .page .founders_note,
+  .page .contact_us {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .page.productImg img {
+    right: 20%;
+  }
+  .page.productImg img[alt="instant drink 1"] {
+    right: 30%;
+    bottom: 30%;
+    height: 20rem;
+  }
+  .page.productImg img[alt="instant drink 2"] {
+    right: 20%;
+    width: 20rem;
+  }
+
+  .redRiceProps .prop.propImg1 img {
+    right: 5%;
+    bottom: 10%;
+  }
+  .redRiceProps .prop.propImg2 img {
+    right: -1rem;
+    top: 0%;
+  }
+  .redRiceProps .prop.propImg3 img {
+    left: 30%;
+    bottom: 10%;
+    rotate: -15deg;
+  }
+  .nutPowderProps .prop.propImg1 img {
+    right: 5%;
+    bottom: 5%;
+  }
+  .nutPowderProps .prop.propImg2 img {
+    right: 40%;
+    bottom: 10%;
+  }
+  .nutPowderProps .prop.propImg3 img {
+    right: 10%;
+    bottom: 50%;
+  }
+  .nutPowderProps .prop.propImg4 img {
+    right: 45%;
+    top: 10%;
+  }
+  .nutPowderProps .prop.propImg5 img {
+    right: 2%;
+    top: 15%;
+  }
+  .nutPowderProps .prop.propImg6 img {
+    left: 10%;
+    bottom: 10%;
+  }
+  .oatsCerealProps .prop.propImg1 img {
+    right: 35%;
+    bottom: 10%;
+  }
+  .oatsCerealProps .prop.propImg2 img {
+    right: 45%;
+    top: 10%;
+  }
+  .oatsCerealProps .prop.propImg3 img {
+    right: 10%;
+    bottom: 40%;
+  }
+  .oatsCerealProps .prop.propImg4 img {
+    right: 5%;
+    bottom: 5%;
+  }
+  .oatsCerealProps .prop.propImg5 img {
+    right: 7%;
+    top: 15%;
+  }
+  .instantDrinkProps .prop.propImg1 img {
+    right: 35%;
+    bottom: 17%;
+    width: clamp(10rem, 20vw, 20rem);
+  }
+  .instantDrinkProps .prop.propImg2 img {
+    right: 20%;
+    bottom: 22%;
+  }
+  .instantDrinkProps .prop.propImg3 img {
+    top: 30%;
+    left: 22%;
+    width: clamp(2rem, 10vw, 4rem);
+  }
+  .page .founders_note {
+    width: 60%;
+    right: 10%;
+  }
+  .foundersNoteProps .prop.propImg1 img {
+    right: 10%;
+    top: 10%;
+  }
+  .foundersNoteProps .prop.propImg2 img {
+    right: 10%;
+    bottom: 5%;
+  }
+  .foundersNoteProps .prop.propImg3 img {
+    top: 20%;
+    right: 16%;
+  }
+  .foundersNoteProps .prop.propImg4 img {
+    top: 20%;
+    right: 12%;
+  }
+  .foundersNoteProps .prop.propImg5 img {
+    bottom: 10%;
+    left: 10%;
+  }
+  .page .contact_us {
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+  }
+  .contactUsProps .prop.propImg1 img {
+    right: 45%;
+    top: 40%;
+  }
+  .contactUsProps .prop.propImg2 img {
+    right: 30%;
+    top: 47%;
+  }
+  .contactUsProps .prop.propImg3 img {
+    right: 15%;
+    top: 40%;
+  }
 }
 
 @media (min-width: 1025px) {
