@@ -26,7 +26,7 @@ const Navbar = () => {
         {pathname === "/" && user?.admin && <Link href={"/admin"}>Admin</Link>}
         <div className={styles.actions}>
           <h3 className={styles.moms_choice} onClick={closeMenu}>
-            Mom's Choice
+            Moms Choice
           </h3>
           <Image
             src={require("public/Icons/Search.svg")}
@@ -70,7 +70,7 @@ const Navbar = () => {
           onClick={closeMenu}
         >
           <Link href={"#FoundersNote"} shallow={true}>
-            Founder's Note
+            Founders Note
           </Link>
         </h2>
         <h2
