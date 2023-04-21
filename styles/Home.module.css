@@ -303,6 +303,20 @@
   top: 42%;
 }
 
+.testimonialsContainer {
+  position: inherit;
+  display: flex;
+  overflow-x: scroll;
+  width: 75%;
+  height: 60%;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: all;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
 .STD {
   /*Scroll to discover*/
   position: absolute;
@@ -313,7 +327,7 @@
   font-size: var(--fs-150);
 }
 
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
   .page img,
   .page.productImg img,
   .page.productImg img[alt="instant drink 1"],
@@ -480,7 +494,7 @@
     right: 15%;
     top: 40%;
   }
-}
+} */
 
 @media (min-width: 1025px) {
   .wrapper {

@@ -709,7 +709,10 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 7)}%)`,
           }}
         >
-          <Testimonial />
+          <div className={styles.testimonialsContainer}>
+            <Testimonial />
+            <Testimonial />
+          </div>
         </div>
       </div>
     </ReactScrollWheelHandler>

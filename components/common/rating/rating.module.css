@@ -1,0 +1,8 @@
+.rating > * {
+  display: inline-block;
+}
+
+.rating > img {
+  width: 1rem;
+  aspect-ratio: 1/1;
+}
