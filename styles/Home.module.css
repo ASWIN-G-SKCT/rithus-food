@@ -71,7 +71,8 @@
 
 .page.productImg,
 .page.foundersPage,
-.page.contactUsPage {
+.page.contactUsPage,
+.page.testimonialsPage {
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
 }
@@ -315,6 +316,11 @@
   pointer-events: all;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.testimonialsContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .STD {
@@ -327,7 +333,7 @@
   font-size: var(--fs-150);
 }
 
-/* @media (min-width: 767px) {
+@media (min-width: 767px) {
   .page img,
   .page.productImg img,
   .page.productImg img[alt="instant drink 1"],
@@ -494,7 +500,7 @@
     right: 15%;
     top: 40%;
   }
-} */
+}
 
 @media (min-width: 1025px) {
   .wrapper {

@@ -21,6 +21,11 @@
   scroll-snap-type: x mandatory;
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
+.mediaContainer::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
 .mediaContainer img {
   scroll-snap-align: start;
   min-width: 100%;
@@ -56,4 +61,24 @@
   font-size: var(--fs-100);
   font-weight: var(--fw-300);
   font-family: var(--ff-secondary);
+}
+
+@media (min-width: 767px) {
+  .testimonial {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin: initial;
+  }
+  .mediaContainer {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+  }
+  .reviewContainer {
+    height: 75%;
+    width: 100%;
+    border-radius: 0 15px 15px 0;
+  }
 }
