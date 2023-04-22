@@ -35,6 +35,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+  .testimonials {
+    top: 25%;
+    left: 60%;
+  }
 }
 
 @media (min-width: 1024px) {

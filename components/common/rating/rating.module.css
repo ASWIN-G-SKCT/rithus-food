@@ -6,3 +6,10 @@
   width: 1rem;
   aspect-ratio: 1/1;
 }
+
+@media (min-width: 767px) {
+  .rating > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

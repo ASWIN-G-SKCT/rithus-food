@@ -16,7 +16,6 @@
   height: 50%;
   display: flex;
   overflow-x: auto;
-  background: #bc2626;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -77,8 +76,18 @@
     border-radius: 15px;
   }
   .reviewContainer {
+    display: flex;
+    flex-direction: column;
     height: 75%;
     width: 100%;
     border-radius: 0 15px 15px 0;
+    gap: var(--testimonials-gap);
+  }
+  .reviewContainer .header,
+  .reviewContainer .city {
+    font-size: var(--fs-400);
+  }
+  .reviewContainer .body {
+    font-size: var(--fs-300);
   }
 }
