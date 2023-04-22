@@ -26,10 +26,10 @@ function ProductName(props: any) {
           <div className={styles.body}>
             <p>
               I have used many products from rithu foods which ma daughter liked
-              so much it's unlike other products we buy from outside...it's so
-              helpful when we travel nd taste is also 😋...i like the way they
-              put so much hard work to prepare those items with full hygiene nd
-              quality.the shelf life lasts long.
+              so much it&apos;s unlike other products we buy from
+              outside...it&apos;s so helpful when we travel nd taste is also
+              😋...i like the way they put so much hard work to prepare those
+              items with full hygiene nd quality.the shelf life lasts long.
             </p>
           </div>
         </div>
