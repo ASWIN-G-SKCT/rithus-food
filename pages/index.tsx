@@ -5,6 +5,7 @@ import Image from "next/image";
 import useMousePosition from "hooks/useMousePosition";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import ProductName from "components/home_page/ProductName";
+import Testimonial from "components/home_page/Testimonial";
 import Footer from "components/common/footer";
 import { useRouter } from "next/router";
 
@@ -694,9 +695,25 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* <div className={`${styles.page}`}>
-          <ProductName page="07" pageName="Testimonials" />
-        </div> */}
+        <div
+          className={`${styles.page} ${styles.title}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 7)}%)`,
+          }}
+        >
+          <ProductName page="7" pageName="Testimonials" />
+        </div>
+        <div
+          className={`${styles.page} ${styles.testimonialsPage}`}
+          style={{
+            transform: `translateY(${100 * -(currentPage - 7)}%)`,
+          }}
+        >
+          <div className={styles.testimonialsContainer}>
+            <Testimonial />
+            <Testimonial />
+          </div>
+        </div>
       </div>
     </ReactScrollWheelHandler>
   );

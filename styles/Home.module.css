@@ -71,7 +71,8 @@
 
 .page.productImg,
 .page.foundersPage,
-.page.contactUsPage {
+.page.contactUsPage,
+.page.testimonialsPage {
   transition: transform 2s cubic-bezier(0.72, 0.67, 0.18, 0.93);
   z-index: 10;
 }
@@ -302,6 +303,26 @@
   right: 14%;
   top: 42%;
 }
+
+.testimonialsContainer {
+  position: inherit;
+  display: flex;
+  overflow-x: scroll;
+  width: 75%;
+  height: 60%;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: all;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.testimonialsContainer::-webkit-scrollbar {
+  display: none;
+}
+
 .STD {
   /*Scroll to discover*/
   position: absolute;
