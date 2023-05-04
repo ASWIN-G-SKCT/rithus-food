@@ -8,6 +8,7 @@ import ProductName from "components/home_page/ProductName";
 import Testimonial from "components/home_page/Testimonial";
 import Footer from "components/common/footer";
 import { useRouter } from "next/router";
+import { IMAGES_MANIFEST } from "next/dist/shared/lib/constants";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -100,9 +101,9 @@ export default function Home() {
               onClick={() => paginationHandler(7)}
             ></div>
           </div>
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Props/Bowl.svg")}
+            src={'https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/Bowl.svg'}
             alt="bowl of grains"
             style={{
               translate: `${50 * currentPage}% ${y}px`,
@@ -143,9 +144,9 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 1)}%)`,
           }}
         >
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Products/RedRicePowder.svg")}
+            src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/RedRicePowder.svg"}
             alt="red rice powder"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -159,9 +160,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 1)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/redRice.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/redRice.svg"}
               alt="red rice"
               style={{
                 translate: `${x + 2}px ${y - 3}px`,
@@ -174,9 +175,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 1)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/spoonRight.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/spoonRight.svg"}
               alt="spoon with flour right"
               style={{
                 translate: `${-x}px ${y + 2}px`,
@@ -189,9 +190,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 1)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/spoonWhiteFlour.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/spoonWhiteFlour.svg"}
               alt="spoon with white flour"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -218,9 +219,9 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 2)}%)`,
           }}
         >
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Products/nutSeedsPowder.svg")}
+            src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/nutSeedsPowder.svg"}
             alt="nut and seeds powder"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -234,9 +235,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/Bowl.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/Bowl.svg"}
               alt="Bowl"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -249,9 +250,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/almond.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/almond.svg"}
               alt="almond"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -264,9 +265,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/nut.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/nut.svg"}
               alt="nut"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -279,9 +280,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/cashew.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/cashew.svg"}
               alt="cashew"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -294,9 +295,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/elachi.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/elachi.svg"}
               alt="elachi"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -309,9 +310,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 2)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/pista.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/pista.svg"}
               alt="pista"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -338,9 +339,9 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 3)}%)`,
           }}
         >
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Products/oatsCerealMix.svg")}
+            src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/oatsCerealMix.svg"}
             alt="oats cereal mix"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -354,9 +355,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 3)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/oatBowl.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/oatBowl.svg"}
               alt="oat Bowl"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -369,9 +370,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 3)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/almond2.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/almond2.svg"}
               alt="almond2"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -384,9 +385,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 3)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/pista2.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/pista2.svg"}
               alt="pista2"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -399,9 +400,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 3)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/hasleNut.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/haslenut.svg"}
               alt="hasle Nut"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -414,9 +415,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 3)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/elachi.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/elachi.svg"}
               alt="elachi"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -443,9 +444,9 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 4)}%)`,
           }}
         >
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Products/instantDrink1.svg")}
+            src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/InstantDrink1.svg"}
             alt="instant  drink 1"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -458,9 +459,9 @@ export default function Home() {
             transform: `translateY(${100 * -(currentPage - 4)}%)`,
           }}
         >
-          <Image
+          <img
             className={styles.parallax_img}
-            src={require("public/Assets/Products/instantDrink2.svg")}
+            src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/InstantDrink2.svg"}
             alt="instant  drink 2"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -474,9 +475,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 4)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/carrot.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/carrot.svg"}
               alt="carrot"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -489,9 +490,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 4)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocoPowder.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocoPowder.svg"}
               alt="choco powder"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -504,9 +505,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 4)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolateDrop.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolateDrop.svg"}
               alt="chocolate drop"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -549,9 +550,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 5)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolate1.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolate1.svg"}
               alt="chocolate1"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -564,9 +565,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 5)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolate2.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolate2.svg"}
               alt="chocolate2"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -579,9 +580,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 5)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolateDrop.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolateDrop.svg"}
               alt="chocolate drop"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -594,9 +595,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 5)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolateDrop4.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolateDrop4.svg"}
               alt="chocolate drop"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -609,9 +610,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 5)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/chocolateDrop2.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/chocolate2.svg"}
               alt="chocolate drop 2"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -651,9 +652,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 6)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/almond.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/almond.svg"}
               alt="chocolate1"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -668,9 +669,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 6)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/haslenut.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/haslenut.svg"}
               alt="chocolate2"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -685,9 +686,9 @@ export default function Home() {
               transform: `translateY(${100 * -(currentPage - 6)}%)`,
             }}
           >
-            <Image
+            <img
               className={styles.parallax_img}
-              src={require("public/Assets/Props/pista.svg")}
+              src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/pista.svg"}
               alt="chocolate drop"
               style={{
                 translate: `${x + 1}px ${-y}px`,
