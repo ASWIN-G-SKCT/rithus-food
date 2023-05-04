@@ -86,7 +86,7 @@
   right: 0;
   bottom: 25%;
   margin-inline: auto;
-  height: fit-content;
+  /* height: fit-content; */
   width: fit-content;
 
   width: clamp(13rem, 30vw, 25rem);
@@ -133,7 +133,7 @@
   z-index: 15;
 }
 .prop img {
-  height: fit-content;
+  /* height: fit-content; */
   width: fit-content;
 }
 .prop.propImg1 img {
@@ -339,7 +339,7 @@
   }
   .wrapper img[alt="bowl of grains"] {
     width: 32rem;
-    /* right: 3%; */
+    right: 3%;
   }
   .page img,
   .page.productImg img,
@@ -528,7 +528,7 @@
 
   .wrapper img[alt="bowl of grains"] {
     width: 45rem;
-    left:76%;
+    left: 76%;
     bottom: -30%;
   }
   .wrapper img[alt="CUAlmond"] {
