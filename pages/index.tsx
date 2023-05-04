@@ -222,7 +222,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={"https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Products/nutSeedsPowder.svg"}
-            alt="nut and seeds powder"
+            alt="nuts and seeds powder"
             style={{
               translate: `${-x}px ${-y}px`,
             }}
