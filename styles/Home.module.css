@@ -12,8 +12,8 @@
 }
 
 .wrapper img[alt="bowl of grains"] {
-  right: -45%;
-  bottom: -30%;
+  right: -46%;
+  bottom: 0%;
   width: clamp(20rem, 1vw, 30rem);
 }
 
@@ -334,6 +334,13 @@
 }
 
 @media (min-width: 767px) {
+  .wrapper {
+    height: 100vh;
+  }
+  .wrapper img[alt="bowl of grains"] {
+    width: 32rem;
+    /* right: 3%; */
+  }
   .page img,
   .page.productImg img,
   .page.productImg img[alt="instant drink 1"],
@@ -520,7 +527,9 @@
   }
 
   .wrapper img[alt="bowl of grains"] {
-    width: 60rem;
+    width: 45rem;
+    left:76%;
+    bottom: -30%;
   }
   .wrapper img[alt="CUAlmond"] {
     right: 50vw;
