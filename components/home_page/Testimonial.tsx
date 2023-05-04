@@ -4,33 +4,23 @@ import Image from "next/image";
 import Rating from "components/common/rating";
 
 function ProductName(props: any) {
+  const mediaData = props.data.media;
   return (
     <div className={styles.container}>
       <div className={styles.testimonial}>
         <div className={styles.mediaContainer}>
-          <Image
-            src={require("public/Assets/test/baby1.png")}
-            alt="testimonial media"
-          />
-          <Image
-            src={require("public/Assets/test/baby1.png")}
-            alt="testimonial media"
-          />
+          {mediaData.map((data: any) => {
+            return <img src={data} alt="testimonial media" />;
+          })}
         </div>
         <div className={styles.reviewContainer}>
           <div className={styles.header}>
-            <p>Mrs.Sowbarnika</p>
+            <p>{props.data.name}</p>
             <Rating />
           </div>
-          <p className={styles.city}>Bangalore</p>
+          <p className={styles.city}>{props.data.city}</p>
           <div className={styles.body}>
-            <p>
-              I have used many products from rithu foods which ma daughter liked
-              so much it&apos;s unlike other products we buy from
-              outside...it&apos;s so helpful when we travel nd taste is also
-              😋...i like the way they put so much hard work to prepare those
-              items with full hygiene nd quality.the shelf life lasts long.
-            </p>
+            <p>{props.data.review}</p>
           </div>
         </div>
       </div>
