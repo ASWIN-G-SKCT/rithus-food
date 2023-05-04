@@ -265,7 +265,7 @@ export default function Home() {
               }
               alt="Bowl"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 1}px ${y + 3}px`,
               }}
             />
           </div>
@@ -282,7 +282,7 @@ export default function Home() {
               }
               alt="almond"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 5}px ${y + 1}px`,
               }}
             />
           </div>
@@ -297,9 +297,9 @@ export default function Home() {
               src={
                 "https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/nut.svg"
               }
-              alt="nut"
+              alt="hazlenut"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 1}px ${y - 6}px`,
               }}
             />
           </div>
@@ -316,7 +316,7 @@ export default function Home() {
               }
               alt="cashew"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 4}px ${-y}px`,
               }}
             />
           </div>
@@ -333,7 +333,7 @@ export default function Home() {
               }
               alt="elachi"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 2}px ${y - 6}px`,
               }}
             />
           </div>
@@ -350,7 +350,7 @@ export default function Home() {
               }
               alt="pista"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 5}px ${y + 1}px`,
               }}
             />
           </div>
@@ -399,7 +399,7 @@ export default function Home() {
               }
               alt="oat Bowl"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 3}px ${y - 3}px`,
               }}
             />
           </div>
@@ -416,7 +416,7 @@ export default function Home() {
               }
               alt="almond2"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 1}px ${y + 3}px`,
               }}
             />
           </div>
@@ -433,7 +433,7 @@ export default function Home() {
               }
               alt="pista2"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 3}px ${y - 4}px`,
               }}
             />
           </div>
@@ -450,7 +450,7 @@ export default function Home() {
               }
               alt="hasle Nut"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 6}px ${y + 2}px`,
               }}
             />
           </div>
@@ -498,7 +498,7 @@ export default function Home() {
             }
             alt="instant  drink 1"
             style={{
-              translate: `${-x}px ${-y}px`,
+              translate: `${x + 2}px ${y - 1}px`,
             }}
           />
         </div>
@@ -515,7 +515,7 @@ export default function Home() {
             }
             alt="instant  drink 2"
             style={{
-              translate: `${-x}px ${-y}px`,
+              translate: `${-x}px ${y + 2}px`,
             }}
           />
         </div>
@@ -533,7 +533,7 @@ export default function Home() {
               }
               alt="carrot"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${-x}px ${y + 2}px`,
               }}
             />
           </div>
@@ -550,7 +550,7 @@ export default function Home() {
               }
               alt="choco powder"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${-x}px ${-y}px`,
               }}
             />
           </div>
@@ -567,7 +567,7 @@ export default function Home() {
               }
               alt="chocolate drop"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 2}px ${y - 1}px`,
               }}
             />
           </div>
@@ -614,7 +614,7 @@ export default function Home() {
               }
               alt="chocolate1"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 1}px ${y + 3}px`,
               }}
             />
           </div>
@@ -631,7 +631,7 @@ export default function Home() {
               }
               alt="chocolate2"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 3}px ${y + 1}px`,
               }}
             />
           </div>
@@ -648,7 +648,7 @@ export default function Home() {
               }
               alt="chocolate drop"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${-x}px ${y + 2}px`,
               }}
             />
           </div>
@@ -665,7 +665,7 @@ export default function Home() {
               }
               alt="chocolate drop"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${-x}px ${-y}px`,
               }}
             />
           </div>
@@ -682,7 +682,7 @@ export default function Home() {
               }
               alt="chocolate drop 2"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x}px ${-y}px`,
               }}
             />
           </div>
@@ -706,8 +706,41 @@ export default function Home() {
             onMouseOver={() => setHoverActive(true)}
             onMouseLeave={() => setHoverActive(false)}
           >
-            <p>Rithusbabyfoods@Gmail.Com</p>
+            <a href="mailto:rithusfoods@gmail.com">Rithusfoods@Gmail.Com</a>
+            {/* <p>Rithusfoods@Gmail.Com</p> */}
             <p>+91 8110933444</p>
+            <div className={styles.test}>
+              <div className={styles.socialMedia}>
+                <Link
+                  href={
+                    "https://instagram.com/rithus_baby_foods?igshid=YmMyMTA2M2Y="
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    src={require("public/Icons/instagram.svg")}
+                    alt="instagram icon"
+                  />
+                </Link>
+                <Link href={"https://wa.me/8110933444"} target="_blank">
+                  <Image
+                    src={require("public/Icons/whatsapp.svg")}
+                    alt="whatsapp icon"
+                  />
+                </Link>
+                <Link
+                  href={
+                    "https://www.facebook.com/profile.php?id=100071178183258"
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    src={require("public/Icons/facebook.svg")}
+                    alt="facebook icon"
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${styles.contactUsProps}`}>
@@ -724,9 +757,9 @@ export default function Home() {
               src={
                 "https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/almond.svg"
               }
-              alt="chocolate1"
+              alt="almond"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x - 1}px ${-y}px`,
               }}
             />
           </div>
@@ -743,9 +776,9 @@ export default function Home() {
               src={
                 "https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/haslenut.svg"
               }
-              alt="chocolate2"
+              alt="haslenut"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x + 1}px ${y - 3}px`,
               }}
             />
           </div>
@@ -762,9 +795,9 @@ export default function Home() {
               src={
                 "https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/Props/pista.svg"
               }
-              alt="chocolate drop"
+              alt="pista"
               style={{
-                translate: `${x + 1}px ${-y}px`,
+                translate: `${x}px ${-y}px`,
               }}
             />
           </div>

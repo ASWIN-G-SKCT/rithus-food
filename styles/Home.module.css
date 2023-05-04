@@ -61,7 +61,9 @@
   inline-size: clamp(200px, 50vw, 800px);
   overflow-wrap: break-word;
   font-family: var(--ff-ph);
+  color: var(--clr-primary-900);
   font-size: var(--fs-primary-headings);
+  letter-spacing: var(--letter-spacing);
   font-weight: var(--fw-bold);
 }
 .page.title {
@@ -271,15 +273,31 @@
 
 .page .contact_us {
   position: inherit;
-  top: 50%;
+  top: 40%;
   left: 50%;
   translate: -50% -50%;
   text-align: center;
   width: fit-content;
+  /* display: flex; */
+  /* align-items: center; */
   font-size: calc(var(--fs-350) + 1px);
   pointer-events: all;
+  color: var(--clr-primary-900);
 }
-.page .contact_us p:first-child {
+.test {
+  padding-left: 20%;
+}
+.socialMedia {
+  top: 60%;
+  display: flex;
+  gap: 1rem;
+}
+.socialMedia img {
+  /* width: clamp(2rem, 10vw, 2.5rem); */
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.page .contact_us a:first-child {
   font-family: var(--ff-primary);
 }
 .contactUsProps .prop img {
@@ -581,5 +599,19 @@
   .pagination .page_dot.active {
     width: 25px;
     height: 25px;
+  }
+  .test {
+    padding-left: 35%;
+  }
+  .socialMedia {
+    align-items: center;
+    top: 60%;
+    display: flex;
+    gap: 1rem;
+  }
+  .socialMedia img {
+    /* width: clamp(2rem, 10vw, 2.5rem); */
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }

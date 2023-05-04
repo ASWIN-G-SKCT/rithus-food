@@ -14,6 +14,12 @@ const Navbar = () => {
   const closeMenu = () => {
     setMenu(false);
   };
+  const [showText, setShowText] = useState(false);
+
+  const handleClick = () => {
+    setShowText(!showText);
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
@@ -91,17 +97,6 @@ const Navbar = () => {
           onClick={closeMenu}
         >
           <Link
-            href={
-              "https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fc%2F918110933444&e=AT2h04znDrxP6lsjWLfkd6JN07QKrcDafRi5CvdH_MAcCc83uxl2G1e2s4GnjeBP419TeM1WkbtdPL-K21EtRvtLKelRp8O7qWzL1g"
-            }
-            target="_blank"
-          >
-            <Image
-              src={require("public/Icons/whatsapp.svg")}
-              alt="whatsapp icon"
-            />
-          </Link>
-          <Link
             href={"https://instagram.com/rithus_baby_foods?igshid=YmMyMTA2M2Y="}
             target="_blank"
           >
@@ -110,6 +105,42 @@ const Navbar = () => {
               alt="instagram icon"
             />
           </Link>
+          <Link href={"https://wa.me/8110933444"} target="_blank">
+            <Image
+              src={require("public/Icons/whatsapp.svg")}
+              alt="whatsapp icon"
+            />
+          </Link>
+          <Link
+            href={"https://www.facebook.com/profile.php?id=100071178183258"}
+            target="_blank"
+          >
+            <Image
+              src={require("public/Icons/facebook.svg")}
+              alt="facebook icon"
+            />
+          </Link>
+        </div>
+        <div
+          className={styles.ogfssai}
+          style={{
+            transform: `translateY(${100 * (menu ? 0 : 100)}%)`,
+          }}
+        >
+          <Image
+            src={require("public/Icons/FSSAI.svg")}
+            alt="fssai icon"
+            style={{
+              width: "83.5px",
+              height: "54px",
+            }}
+            onClick={handleClick}
+          />
+          {showText && (
+            <div className={styles.fssai}>
+              <h2>22421561000185</h2>
+            </div>
+          )}
         </div>
         <footer
           className={styles.footer}
@@ -123,8 +154,8 @@ const Navbar = () => {
               alt="Copywrite icon"
             />
             Rithus Foods
-            <Image src={require("public/Icons/Dot.svg")} alt="Dot icon" />
-            Designed by InExore
+            {/* <Image src={require("public/Icons/Dot.svg")} alt="Dot icon" />
+            Designed by InExore */}
             <Image src={require("public/Icons/Dot.svg")} alt="Dot icon" />
             Policy
           </h3>
