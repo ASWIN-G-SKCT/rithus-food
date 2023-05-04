@@ -43,12 +43,22 @@ export default function Home() {
     >
       <div className={styles.wrapper}>
         <div className={styles.main}>
-          <div className={styles.STD}>
+          <div className={`${styles.STD} `}>
             <Image
+              className={`${styles.bounce}`}
               src={require("public/Icons/Arrow.svg")}
               alt="arrow down icon"
             />
-            <h4>Scroll to discover</h4>
+            {currentPage === 7 ? (
+              <h4
+                style={{ cursor: "pointer" }}
+                onClick={() => setCurrentPage(1)}
+              >
+                Scroll to Top
+              </h4>
+            ) : (
+              <h4>Scroll to discover</h4>
+            )}
           </div>
 
           <div className={styles.pagination}>

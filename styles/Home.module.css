@@ -323,6 +323,22 @@
   display: none;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: bounce 0.8s infinite;
+}
+
 .STD {
   /*Scroll to discover*/
   position: absolute;
