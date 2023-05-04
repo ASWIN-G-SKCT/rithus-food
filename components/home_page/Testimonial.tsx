@@ -16,7 +16,7 @@ function ProductName(props: any) {
         <div className={styles.reviewContainer}>
           <div className={styles.header}>
             <p>{props.data.name}</p>
-            <Rating />
+            <Rating rating={props.data.rating} />
           </div>
           <p className={styles.city}>{props.data.city}</p>
           <div className={styles.body}>
