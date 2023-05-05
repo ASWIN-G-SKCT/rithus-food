@@ -817,8 +817,8 @@ export default function Home() {
           }}
         >
           <div className={styles.testimonialsContainer}>
-            {testimonialsData.map((testimonial) => {
-              return <Testimonial data={testimonial} />;
+            {testimonialsData.map((testimonial, index) => {
+              return <Testimonial data={testimonial} key={index} />;
             })}
           </div>
         </div>
