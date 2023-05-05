@@ -1,11 +1,39 @@
 const testimonialsData = [
   {
-    "name": "Jayvan",
-    "city": "Kanyakumari",
-    "photos": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/WhatsApp+Image+2023-05-04+at+9.21.53+AM.jpeg'],
-    "videos": [''],
+    "name": "Mrs.Sowbarnika",
+    "city": "Banglore",
+    "media": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/Sowbarnika.jpeg'],
     "rating": 5,
-    "review": "This is the best product in the world"
+    "review": "They offer a great variety of products to try and explore, which is perfect for those who enjoy experimenting with new foods."
+  },
+  {
+    "name": "Mrs.Thahaaseen",
+    "city": "Salem",
+    "media": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/Thahaaseen.jpeg'],
+    "rating": 5,
+    "review": "They have the best food product in the market."
+  },
+  {
+    "name": "Dr.Keerthana",
+    "city": "Tirupur",
+    "media": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/Dr+Keerthana.jpeg'],
+    "rating": 4,
+    "review": "My son likes the food they make."
+  },
+  {
+    "name": "Mrs.Jamuna",
+    "city": "Coimbatore",
+    "media": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/jamuna.jpeg'],
+    "rating": 4,
+    "review": "The food products that they offered had excellent quality, with ingredients that were fresh, flavorful, and free from preservatives or artificial additives 😁. "
+  },
+  {
+    "name": "Mrs.Shaleena",
+    "city": "Hosur",
+    "media": ['https://rithusfoods.s3.ap-south-1.amazonaws.com/Assets/testimonial+data/Shaleena.mp4'],
+    "rating": 5,
+    "review": "Yummiest food i ever tasted 🤤."
+
   }
 ]
 
