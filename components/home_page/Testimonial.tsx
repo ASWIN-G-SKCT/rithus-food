@@ -4,13 +4,22 @@ import Image from "next/image";
 import Rating from "components/common/rating";
 
 function ProductName(props: any) {
-  const mediaData = props.data.media;
+  const photos = props.data.photos;
+  const videos = props.data.videos;
   return (
     <div className={styles.container}>
       <div className={styles.testimonial}>
         <div className={styles.mediaContainer}>
-          {mediaData.map((data: any) => {
+          {photos.map((data: any) => {
             return <img src={data} alt="testimonial media" />;
+          })}
+          {videos.map((data: any) => {
+            return (
+              <video controls>
+                <source src={data} type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            );
           })}
         </div>
         <div className={styles.reviewContainer}>

@@ -26,7 +26,8 @@
   scrollbar-width: none;
 }
 
-.mediaContainer img {
+.mediaContainer img,
+.mediaContainer video {
   scroll-snap-align: start;
   min-width: 100%;
   max-width: 100%;
