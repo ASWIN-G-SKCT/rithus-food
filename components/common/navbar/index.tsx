@@ -94,7 +94,6 @@ const Navbar = () => {
           style={{
             transform: `translateY(${100 * (menu ? 0 : 100)}%)`,
           }}
-          onClick={closeMenu}
         >
           <Link
             href={"https://instagram.com/rithus_baby_foods?igshid=YmMyMTA2M2Y="}
@@ -120,13 +119,7 @@ const Navbar = () => {
               alt="facebook icon"
             />
           </Link>
-        </div>
-        <div
-          className={styles.ogfssai}
-          style={{
-            transform: `translateY(${100 * (menu ? 0 : 100)}%)`,
-          }}
-        >
+
           <Image
             src={require("public/Icons/FSSAI.svg")}
             alt="fssai icon"
@@ -136,6 +129,7 @@ const Navbar = () => {
             }}
             onClick={handleClick}
           />
+
           {showText && (
             <div className={styles.fssai}>
               <h2>22421561000185</h2>
