@@ -7,11 +7,17 @@ const Rating = (props: any) => {
   const stars = [];
   for (let i = 0; i < props.rating; i++) {
     stars.push(
-      <Image src={require("public/Icons/star_filled.svg")} alt="star filled" />
+      <Image
+        src={require("public/Icons/star_filled.svg")}
+        key={i}
+        alt="star filled"
+      />
     );
   }
   for (let i = 0; i < 5 - props.rating; i++) {
-    stars.push(<Image src={require("public/Icons/star.svg")} alt="star" />);
+    stars.push(
+      <Image src={require("public/Icons/star.svg")} key={i} alt="star" />
+    );
   }
   return <div className={styles.rating}>{stars}</div>;
 };

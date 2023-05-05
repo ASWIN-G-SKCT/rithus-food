@@ -25,8 +25,10 @@ const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.logo} onClick={closeMenu}>
           <Link href={"/#"} shallow={true}>
-            <h1>Rithus</h1>
-            <h1>Foods</h1>
+            <Image
+              src={require("../../../public/Assets/Logo.svg")}
+              alt="logo"
+            />
           </Link>
         </div>
         {pathname === "/" && user?.admin && <Link href={"/admin"}>Admin</Link>}

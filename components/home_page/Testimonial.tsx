@@ -10,12 +10,12 @@ function ProductName(props: any) {
     <div className={styles.container}>
       <div className={styles.testimonial}>
         <div className={styles.mediaContainer}>
-          {photos.map((data: any) => {
-            return <img src={data} alt="testimonial media" />;
+          {photos.map((data: any, index: number) => {
+            return <img src={data} key={index} alt="testimonial media" />;
           })}
-          {videos.map((data: any) => {
+          {videos.map((data: any, index: number) => {
             return (
-              <video controls>
+              <video controls key={index}>
                 <source src={data} type="video/mp4" />
                 Your browser does not support HTML5 video.
               </video>
