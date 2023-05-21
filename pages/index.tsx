@@ -115,9 +115,8 @@ export default function Home() {
           </div>
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Props/Bowl.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Props/Bowl.svg`}
             alt="bowl of grains"
             style={{
               translate: `${50 * currentPage}% ${y}px`,
@@ -160,9 +159,8 @@ export default function Home() {
         >
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Products/RedRicePowder.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Products/RedRicePowder.svg`}
             alt="red rice powder"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -178,9 +176,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/redRice.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/redRice.svg`}
               alt="red rice"
               style={{
                 translate: `${x + 2}px ${y - 3}px`,
@@ -195,9 +192,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/spoonRight.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/spoonRight.svg`}
               alt="spoon with flour right"
               style={{
                 translate: `${-x}px ${y + 2}px`,
@@ -212,9 +208,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/spoonWhiteFlour.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/spoonWhiteFlour.svg`}
               alt="spoon with white flour"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -243,9 +238,8 @@ export default function Home() {
         >
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Products/nutSeedsPowder.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Products/nutSeedsPowder.svg`}
             alt="nuts and seeds powder"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -261,9 +255,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/Bowl.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/Bowl.svg`}
               alt="Bowl"
               style={{
                 translate: `${x - 1}px ${y + 3}px`,
@@ -278,9 +271,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/almond.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/almond.svg`}
               alt="almond"
               style={{
                 translate: `${x + 5}px ${y + 1}px`,
@@ -295,9 +287,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/nut.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/nut.svg`}
               alt="hazlenut"
               style={{
                 translate: `${x - 1}px ${y - 6}px`,
@@ -312,9 +303,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/cashew.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/cashew.svg`}
               alt="cashew"
               style={{
                 translate: `${x + 4}px ${-y}px`,
@@ -329,9 +319,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/elachi.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/elachi.svg`}
               alt="elachi"
               style={{
                 translate: `${x - 2}px ${y - 6}px`,
@@ -346,9 +335,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/pista.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/pista.svg`}
               alt="pista"
               style={{
                 translate: `${x - 5}px ${y + 1}px`,
@@ -377,9 +365,8 @@ export default function Home() {
         >
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Products/oatsCerealMix.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Products/oatsCerealMix.svg`}
             alt="oats cereal mix"
             style={{
               translate: `${-x}px ${-y}px`,
@@ -395,9 +382,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/oatBowl.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/oatBowl.svg`}
               alt="oat Bowl"
               style={{
                 translate: `${x + 3}px ${y - 3}px`,
@@ -412,9 +398,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/almond2.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/almond2.svg`}
               alt="almond2"
               style={{
                 translate: `${x - 1}px ${y + 3}px`,
@@ -429,9 +414,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/pista2.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/pista2.svg`}
               alt="pista2"
               style={{
                 translate: `${x + 3}px ${y - 4}px`,
@@ -446,9 +430,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/haslenut.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/haslenut.svg`}
               alt="hasle Nut"
               style={{
                 translate: `${x - 6}px ${y + 2}px`,
@@ -463,9 +446,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/elachi.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/elachi.svg`}
               alt="elachi"
               style={{
                 translate: `${x + 1}px ${-y}px`,
@@ -494,9 +476,8 @@ export default function Home() {
         >
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Products/InstantDrink1.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Products/InstantDrink1.svg`}
             alt="instant  drink 1"
             style={{
               translate: `${x + 2}px ${y - 1}px`,
@@ -511,9 +492,8 @@ export default function Home() {
         >
           <img
             className={styles.parallax_img}
-            src={
-              `${cdnLink}/Assets/Products/InstantDrink2.svg`
-            }
+            loading="lazy"
+            src={`${cdnLink}/Assets/Products/InstantDrink2.svg`}
             alt="instant  drink 2"
             style={{
               translate: `${-x}px ${y + 2}px`,
@@ -529,9 +509,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/carrot.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/carrot.svg`}
               alt="carrot"
               style={{
                 translate: `${-x}px ${y + 2}px`,
@@ -546,9 +525,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocoPowder.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocoPowder.svg`}
               alt="choco powder"
               style={{
                 translate: `${-x}px ${-y}px`,
@@ -563,9 +541,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolateDrop.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolateDrop.svg`}
               alt="chocolate drop"
               style={{
                 translate: `${x + 2}px ${y - 1}px`,
@@ -610,9 +587,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolate1.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolate1.svg`}
               alt="chocolate1"
               style={{
                 translate: `${x - 1}px ${y + 3}px`,
@@ -627,9 +603,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolate2.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolate2.svg`}
               alt="chocolate2"
               style={{
                 translate: `${x + 3}px ${y + 1}px`,
@@ -644,9 +619,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolateDrop.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolateDrop.svg`}
               alt="chocolate drop"
               style={{
                 translate: `${-x}px ${y + 2}px`,
@@ -661,9 +635,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolateDrop4.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolateDrop4.svg`}
               alt="chocolate drop"
               style={{
                 translate: `${-x}px ${-y}px`,
@@ -678,9 +651,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/chocolate2.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/chocolate2.svg`}
               alt="chocolate drop 2"
               style={{
                 translate: `${x}px ${-y}px`,
@@ -755,9 +727,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/almond.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/almond.svg`}
               alt="almond"
               style={{
                 translate: `${x - 1}px ${-y}px`,
@@ -774,9 +745,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/haslenut.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/haslenut.svg`}
               alt="haslenut"
               style={{
                 translate: `${x + 1}px ${y - 3}px`,
@@ -793,9 +763,8 @@ export default function Home() {
           >
             <img
               className={styles.parallax_img}
-              src={
-                `${cdnLink}/Assets/Props/pista.svg`
-              }
+              loading="lazy"
+              src={`${cdnLink}/Assets/Props/pista.svg`}
               alt="pista"
               style={{
                 translate: `${x}px ${-y}px`,

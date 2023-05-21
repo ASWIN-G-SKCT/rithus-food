@@ -11,7 +11,14 @@ function ProductName(props: any) {
       <div className={styles.testimonial}>
         <div className={styles.mediaContainer}>
           {photos.map((data: any, index: number) => {
-            return <img src={data} key={index} alt="testimonial media" />;
+            return (
+              <img
+                loading="lazy"
+                src={data}
+                key={index}
+                alt="testimonial media"
+              />
+            );
           })}
           {videos.map((data: any, index: number) => {
             return (
