@@ -20,7 +20,7 @@ const Products = () => {
   return (
     <div>
       {products?.map((product: Product) => (
-        <ProductCard key={product._id} product={product} />
+        <ProductCard key={product._id} product={product} showcase={false} />
       ))}
       <Link href={"/"}>Go Home</Link>
     </div>
