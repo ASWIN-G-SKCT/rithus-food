@@ -1,0 +1,18 @@
+.footer {
+  display: none;
+  width: var(--home-page-padding);
+  gap: var(--footer-gaps);
+  color: var(--clr-primary-700);
+}
+.footer h3 {
+  font-size: var(--fs-300);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    position: absolute;
+    bottom: -2rem;
+    display: flex;
+    align-items: center;
+  }
+}
