@@ -161,6 +161,8 @@ a:visited:not(#exclude) {
       --fs-secondary-headings: var(--fs-600);
       --fs-primary-pheadings: var(--fs-500);
       --fs-body: var(--fs-500);
+
+      --navbar-gap: 27.313rem;
     }
   }
 }

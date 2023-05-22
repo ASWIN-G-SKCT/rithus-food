@@ -373,7 +373,8 @@
   }
   .wrapper img[alt="bowl of grains"] {
     width: 32rem;
-    right: 3%;
+    /* right: 1%; */
+    left: 3;
   }
   .page img,
   .page.productImg img,
