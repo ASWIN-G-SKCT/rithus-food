@@ -161,7 +161,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={
-              `${cdnLink}/Assets/Products/RedRicePowder.svg`
+              `${cdnLink}/Assets/Products/RedRicePowder.png`
             }
             alt="red rice powder"
             style={{
@@ -179,7 +179,7 @@ export default function Home() {
             <img
               className={styles.parallax_img}
               src={
-                `${cdnLink}/Assets/Props/redRice.svg`
+                `${cdnLink}/Assets/Props/redRice.png`
               }
               alt="red rice"
               style={{
@@ -196,7 +196,7 @@ export default function Home() {
             <img
               className={styles.parallax_img}
               src={
-                `${cdnLink}/Assets/Props/spoonRight.svg`
+                `${cdnLink}/Assets/Props/spoonRight.png`
               }
               alt="spoon with flour right"
               style={{
@@ -213,7 +213,7 @@ export default function Home() {
             <img
               className={styles.parallax_img}
               src={
-                `${cdnLink}/Assets/Props/spoonWhiteFlour.svg`
+                `${cdnLink}/Assets/Props/spoonWhiteFlour.png`
               }
               alt="spoon with white flour"
               style={{
@@ -244,7 +244,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={
-              `${cdnLink}/Assets/Products/nutSeedsPowder.svg`
+              `${cdnLink}/Assets/Products/nutSeedsPowder.png`
             }
             alt="nuts and seeds powder"
             style={{
@@ -262,7 +262,7 @@ export default function Home() {
             <img
               className={styles.parallax_img}
               src={
-                `${cdnLink}/Assets/Props/Bowl.svg`
+                `${cdnLink}/Assets/Props/Bowl.png`
               }
               alt="Bowl"
               style={{
@@ -378,7 +378,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={
-              `${cdnLink}/Assets/Products/oatsCerealMix.svg`
+              `${cdnLink}/Assets/Products/oatsCerealMix.png`
             }
             alt="oats cereal mix"
             style={{
@@ -495,7 +495,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={
-              `${cdnLink}/Assets/Products/InstantDrink1.svg`
+              `${cdnLink}/Assets/Products/InstantDrink1.png`
             }
             alt="instant  drink 1"
             style={{
@@ -512,7 +512,7 @@ export default function Home() {
           <img
             className={styles.parallax_img}
             src={
-              `${cdnLink}/Assets/Products/InstantDrink2.svg`
+              `${cdnLink}/Assets/Products/InstantDrink2.png`
             }
             alt="instant  drink 2"
             style={{
